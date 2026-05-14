@@ -1,0 +1,72 @@
+<section id="contact">
+  <div class="container">
+    <p class="section-label">{{ ls.t().contact.label }}</p>
+    <h2 class="section-title">{{ ls.t().contact.title }}</h2>
+    <p class="section-subtitle">{{ ls.t().contact.subtitle }}</p>
+
+    <div class="contact-layout">
+      <div class="contact-links">
+        <a *ngFor="let link of ls.t().contact.links"
+           [href]="link.href || null"
+           [class.no-link]="!link.href"
+           target="_blank"
+           class="contact-card">
+          <div class="contact-icon" [ngClass]="'icon-' + link.icon">
+            <svg *ngIf="link.icon === 'li'" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <svg *ngIf="link.icon === 'yt'" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#0a0e17"/></svg>
+            <svg *ngIf="link.icon === 'loc'" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-info">
+            <span class="contact-label">{{ link.label }}</span>
+            <span class="contact-value">{{ link.value }}</span>
+          </div>
+          <svg *ngIf="link.href" class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+
+        <div class="download-buttons">
+          <a *ngFor="let d of ls.t().contact.downloads"
+             [href]="d.href"
+             [attr.download]="d.download ? '' : null"
+             [attr.target]="d.download ? null : '_blank'"
+             class="download-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            {{ d.label }}
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <div *ngIf="!submitted; else thankYou">
+          <h3 class="form-title">{{ ls.t().contact.formTitle }}</h3>
+          <form class="contact-form" (ngSubmit)="onSubmit()" #f="ngForm">
+            <div class="form-group">
+              <label for="name">{{ ls.t().contact.nameLabel }}</label>
+              <input id="name" type="text" name="name" [(ngModel)]="form.name" [placeholder]="ls.t().contact.namePlaceholder" required>
+            </div>
+            <div class="form-group">
+              <label for="email">{{ ls.t().contact.emailLabel }}</label>
+              <input id="email" type="email" name="email" [(ngModel)]="form.email" [placeholder]="ls.t().contact.emailPlaceholder" required>
+            </div>
+            <div class="form-group">
+              <label for="message">{{ ls.t().contact.messageLabel }}</label>
+              <textarea id="message" name="message" [(ngModel)]="form.message" [placeholder]="ls.t().contact.messagePlaceholder" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary submit-btn" [disabled]="f.invalid">
+              {{ ls.t().contact.submit }}
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </form>
+        </div>
+        <ng-template #thankYou>
+          <div class="thank-you">
+            <div class="ty-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3>{{ ls.t().contact.sentTitle }}</h3>
+            <p>{{ ls.t().contact.sentBody }}</p>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</section>

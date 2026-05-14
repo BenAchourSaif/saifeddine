@@ -1,0 +1,58 @@
+<section id="projects">
+  <div class="container">
+    <p class="section-label">{{ ls.t().projects.label }}</p>
+    <h2 class="section-title">{{ ls.t().projects.title }}</h2>
+    <p class="section-subtitle">{{ ls.t().projects.subtitle }}</p>
+
+    <div class="featured-project" *ngFor="let p of ls.t().projects.items | slice:0:1">
+      <div class="featured-inner">
+        <div class="featured-text">
+          <span class="project-badge">{{ ls.t().projects.featuredBadge }}</span>
+          <h3 class="project-title">{{ p.title }}</h3>
+          <p class="project-subtitle">{{ p.subtitle }}</p>
+          <p class="project-desc">{{ p.description }}</p>
+          <ul class="project-highlights">
+            <li *ngFor="let h of p.highlights">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              {{ h }}
+            </li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag" *ngFor="let t of p.tags">{{ t }}</span>
+          </div>
+          <div class="project-links">
+            <a [href]="p.demoUrl" target="_blank" class="btn btn-primary">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#0a0e17"/></svg>
+              {{ ls.t().projects.watchDemo }}
+            </a>
+          </div>
+        </div>
+        <div class="featured-visual">
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/kp5x0duiZLI" title="SgharToon Portfolio Demo"
+              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="other-projects">
+      <div class="project-card" *ngFor="let p of ls.t().projects.items | slice:1">
+        <div class="card-accent" [style.background]="p.accentColor"></div>
+        <h3 class="card-title">{{ p.title }}</h3>
+        <p class="card-subtitle">{{ p.subtitle }}</p>
+        <p class="card-desc">{{ p.description }}</p>
+        <ul class="card-highlights">
+          <li *ngFor="let h of p.highlights">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            {{ h }}
+          </li>
+        </ul>
+        <div class="card-tags">
+          <span class="tag" *ngFor="let t of p.tags">{{ t }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

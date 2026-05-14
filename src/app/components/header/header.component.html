@@ -1,0 +1,33 @@
+<header [class.scrolled]="scrolled">
+  <div class="container nav-inner">
+    <a href="#hero" class="logo">
+      <span class="logo-bracket">&lt;</span>SE<span class="logo-slash">/</span><span class="logo-bracket">&gt;</span>
+    </a>
+
+    <nav class="nav-links" [class.open]="menuOpen">
+      <a href="#about"      class="nav-link" (click)="closeMenu()">{{ ls.t().nav.about }}</a>
+      <a href="#skills"     class="nav-link" (click)="closeMenu()">{{ ls.t().nav.skills }}</a>
+      <a href="#projects"   class="nav-link" (click)="closeMenu()">{{ ls.t().nav.projects }}</a>
+      <a href="#experience" class="nav-link" (click)="closeMenu()">{{ ls.t().nav.experience }}</a>
+      <a href="#contact"    class="nav-link" (click)="closeMenu()">{{ ls.t().nav.contact }}</a>
+
+      <div class="lang-switcher">
+        <button
+          *ngFor="let l of langs"
+          class="lang-btn"
+          [class.active]="ls.lang() === l"
+          (click)="setLang(l)">
+          {{ l.toUpperCase() }}
+        </button>
+      </div>
+
+      <a href="https://linkedin.com/in/saif-eddine-ben-achour" target="_blank" class="btn btn-outline nav-cta">
+        {{ ls.t().nav.connect }}
+      </a>
+    </nav>
+
+    <button class="hamburger" (click)="toggleMenu()" [class.active]="menuOpen" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>

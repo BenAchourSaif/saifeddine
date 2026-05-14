@@ -1,0 +1,52 @@
+<section id="hero" class="hero">
+  <div class="hero-bg">
+    <div class="grid-overlay"></div>
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+  </div>
+
+  <div class="container hero-content">
+    <p class="hero-greeting">{{ ls.t().hero.greeting }}</p>
+    <h1 class="hero-name">Saif Eddine<br><span>Ben Achour</span></h1>
+
+    <div class="hero-role">
+      <span class="role-text">{{ displayedRole }}</span><span class="cursor">|</span>
+    </div>
+
+    <p class="hero-tagline" [innerHTML]="ls.t().hero.tagline"></p>
+
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">{{ ls.t().hero.btnWork }}</a>
+      <a href="#contact" class="btn btn-outline">{{ ls.t().hero.btnContact }}</a>
+      <a href="https://drive.google.com/drive/folders/1QMaTn0J3C9qaPpUFgWIoHplKZEC_4XZr" target="_blank" class="btn btn-outline">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        {{ ls.t().hero.btnPortfolio }}
+      </a>
+      <a href="https://drive.google.com/drive/folders/1QMaTn0J3C9qaPpUFgWIoHplKZEC_4XZr" target="_blank" class="btn btn-outline">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        {{ ls.t().hero.btnCV }}
+      </a>
+    </div>
+
+    <div class="hero-meta">
+      <span class="meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        {{ ls.t().hero.location }}
+      </span>
+      <span class="meta-divider">·</span>
+      <a href="https://linkedin.com/in/saif-eddine-ben-achour" target="_blank" class="meta-item meta-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        {{ ls.t().hero.linkedin }}
+      </a>
+      <span class="meta-divider">·</span>
+      <a href="https://youtu.be/kp5x0duiZLI" target="_blank" class="meta-item meta-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#fff"/></svg>
+        {{ ls.t().hero.demo }}
+      </a>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-indicator">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 13l5 5 5-5"/><path d="M7 6l5 5 5-5"/></svg>
+  </a>
+</section>

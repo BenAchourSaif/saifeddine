@@ -1,0 +1,38 @@
+<section id="about">
+  <div class="container">
+    <div class="about-layout">
+      <div class="about-text">
+        <p class="section-label">{{ ls.t().about.label }}</p>
+        <h2 class="section-title" [innerHTML]="ls.t().about.title"></h2>
+
+        <p class="about-body" [innerHTML]="ls.t().about.body1 | safeHtml"></p>
+        <p class="about-body" [innerHTML]="ls.t().about.body2 | safeHtml"></p>
+        <p class="about-body" [innerHTML]="ls.t().about.body3 | safeHtml"></p>
+
+        <div class="about-highlights">
+          <div class="highlight-item" *ngFor="let h of ls.t().about.highlights">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>{{ h }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-stats">
+        <div class="stat-card" *ngFor="let stat of ls.t().about.stats">
+          <span class="stat-value">{{ stat.value }}</span>
+          <span class="stat-label">{{ stat.label }}</span>
+        </div>
+
+        <div class="about-badge">
+          <div class="badge-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <div>
+            <p class="badge-title">{{ ls.t().about.badge.title }}</p>
+            <p class="badge-sub">{{ ls.t().about.badge.sub }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
