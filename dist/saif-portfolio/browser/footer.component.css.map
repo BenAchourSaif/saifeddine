@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/components/footer/footer.component.scss"],
-  "sourcesContent": ["footer {\n  border-top: 1px solid var(--border);\n  padding: 2rem 0;\n  background: var(--bg-secondary);\n}\n\n.footer-inner {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  flex-wrap: wrap;\n  gap: 1rem;\n}\n\n.footer-left {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n}\n\n.footer-logo {\n  font-family: 'JetBrains Mono', monospace;\n  font-size: 1rem;\n  font-weight: 600;\n  color: var(--text-primary);\n  .bracket { color: var(--accent); }\n  .slash { color: var(--text-muted); }\n}\n\n.footer-copy {\n  font-size: 0.82rem;\n  color: var(--text-muted);\n}\n\n.footer-year {\n  font-size: 0.78rem;\n  color: var(--text-muted);\n  font-family: 'JetBrains Mono', monospace;\n}\n\n@media (max-width: 500px) {\n  .footer-inner { flex-direction: column; align-items: flex-start; }\n}\n"],
-  "mappings": ";AAAA;AACE,cAAA,IAAA,MAAA,IAAA;AACA,WAAA,KAAA;AACA,cAAA,IAAA;;AAGF,CAAA;AACE,WAAA;AACA,eAAA;AACA,mBAAA;AACA,aAAA;AACA,OAAA;;AAGF,CAAA;AACE,WAAA;AACA,eAAA;AACA,OAAA;;AAGF,CAAA;AACE,eAAA,gBAAA,EAAA;AACA,aAAA;AACA,eAAA;AACA,SAAA,IAAA;;AACA,CALF,YAKE,CAAA;AAAW,SAAA,IAAA;;AACX,CANF,YAME,CAAA;AAAS,SAAA,IAAA;;AAGX,CAAA;AACE,aAAA;AACA,SAAA,IAAA;;AAGF,CAAA;AACE,aAAA;AACA,SAAA,IAAA;AACA,eAAA,gBAAA,EAAA;;AAGF,QAAA,WAAA;AACE,GAnCF;AAmCkB,oBAAA;AAAwB,iBAAA;;;",
-  "names": []
-}
