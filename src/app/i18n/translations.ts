@@ -67,7 +67,7 @@ export const translations = {
       currentBadge: 'Current', teachingLabel: 'Teaching', recognitionLabel: 'Recognition', educationLabel: 'Education',
       items: [
         {
-          role: 'Senior Unity Systems Engineer', company: 'Sphèrion', location: 'Tunis, Tunisia', period: '2020 – Present', current: true,
+          role: 'Senior Unity Systems Engineer', company: 'SgharToon', location: 'Tunis, Tunisia', period: '2020 – Present', current: true,
           description: 'Lead systems architect on the SgharToon Platform — a therapeutic digital system for children with learning disorders. Responsible for the full technical architecture from initial design to production deployment.',
           achievements: ['Designed and implemented the Modular Data-Driven Runtime Architecture', 'Built 87 therapeutic game variants from a single unified codebase', 'Engineered zero-GC-stall memory systems for WebGL and mobile', 'Developed transport-agnostic networking with therapist-authoritative sessions', 'Achieved deterministic session management across all platform variants', 'Integrated Angular web dashboard for real-time therapist supervision'],
           tags: ['Unity', 'C#', 'WebGL', 'Angular', 'Socket.IO', 'Architecture'],
@@ -166,7 +166,7 @@ export const translations = {
       currentBadge: 'En cours', teachingLabel: 'Enseignement', recognitionLabel: 'Distinctions', educationLabel: 'Formation',
       items: [
         {
-          role: 'Ingénieur Unity Senior', company: 'Sphèrion', location: 'Tunis, Tunisie', period: '2020 – Présent', current: true,
+          role: 'Ingénieur Unity Senior', company: 'SgharToon', location: 'Tunis, Tunisie', period: '2020 – Présent', current: true,
           description: "Architecte systèmes principal de SgharToon — un système thérapeutique numérique pour les enfants ayant des troubles d'apprentissage. Responsable de l'architecture technique complète.",
           achievements: ["Conception et implémentation de l'Architecture Runtime Modulaire Orientée Données", '87 variantes de jeux depuis une seule base de code', "Ingénierie de systèmes mémoire sans gel GC pour WebGL et mobile", "Développement du réseau indépendant du transport avec sessions à autorité thérapeute", "Gestion déterministe des sessions sur toutes les variantes", "Intégration du tableau de bord Angular pour la supervision en temps réel"],
           tags: ['Unity', 'C#', 'WebGL', 'Angular', 'Socket.IO', 'Architecture'],
@@ -265,7 +265,7 @@ export const translations = {
       currentBadge: 'حالياً', teachingLabel: 'التدريس', recognitionLabel: 'التكريمات', educationLabel: 'التعليم',
       items: [
         {
-          role: 'مهندس أنظمة Unity أول', company: 'Sphèrion', location: 'تونس', period: '2020 – الحاضر', current: true,
+          role: 'مهندس أنظمة Unity أول', company: 'SgharToon', location: 'تونس', period: '2020 – الحاضر', current: true,
           description: 'المهندس المعماري الرئيسي لمنصة SgharToon — نظام علاجي رقمي للأطفال ذوي صعوبات التعلم. مسؤول عن المعمارية التقنية الكاملة من التصميم الأولي حتى النشر.',
           achievements: ['تصميم وتنفيذ المعمارية المعيارية المدفوعة بالبيانات', '87 نسخة لعبة علاجية من قاعدة كود موحّدة', 'هندسة أنظمة ذاكرة بدون توقفات GC لـ WebGL والهاتف المحمول', 'تطوير شبكة مستقلة عن وسيلة النقل مع جلسات بسلطة المعالج', 'إدارة جلسات حتمية عبر جميع نسخ المنصة', 'دمج لوحة تحكم Angular للإشراف الفوري'],
           tags: ['Unity', 'C#', 'WebGL', 'Angular', 'Socket.IO', 'Architecture'],
