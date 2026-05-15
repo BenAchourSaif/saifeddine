@@ -64,8 +64,11 @@
         </h3>
         <div class="recognition-list">
           <div class="recognition-item" *ngFor="let r of ls.t().experience.recognition">
-            <span class="rec-title">{{ r.title }}</span>
-            <span class="rec-year">{{ r.year }}</span>
+            <div class="rec-main">
+              <span class="rec-title">{{ r.title }}</span>
+              <span class="rec-year">{{ r.year }}</span>
+            </div>
+            <p class="rec-context" *ngIf="r.context">{{ r.context }}</p>
           </div>
         </div>
       </div>

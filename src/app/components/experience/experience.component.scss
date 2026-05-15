@@ -234,15 +234,19 @@
 }
 
 .recognition-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 0.6rem 0.9rem;
   background: rgba(79, 142, 247, 0.04);
   border: 1px solid var(--border);
   border-radius: 8px;
   transition: border-color 0.2s;
   &:hover { border-color: var(--border-bright); }
+}
+
+.rec-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .rec-title {
@@ -259,6 +263,14 @@
   border: 1px solid var(--border-bright);
   padding: 0.15rem 0.5rem;
   border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.rec-context {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+  line-height: 1.4;
 }
 
 @media (max-width: 600px) {
