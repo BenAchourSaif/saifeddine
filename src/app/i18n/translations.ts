@@ -20,7 +20,7 @@ export const translations = {
         'Open to relocation — Tunis, Tunisia',
       ],
       stats: [
-        { value: '8+', label: 'Years Experience' }, { value: '87', label: 'Game Variants Built' },
+        { value: '8+', label: 'Years Experience' }, { value: '170+', label: 'Game Variants Built' },
         { value: '3', label: 'Platform Roles' }, { value: '0', label: 'Mid-Session GC Stalls' },
       ],
       badge: { title: 'SgharToon Platform', sub: 'v9.0 — Production' },
@@ -44,7 +44,7 @@ export const translations = {
         {
           title: 'SgharToon Platform', subtitle: 'Lead Systems Architect',
           description: 'A digital therapeutic platform connecting parents, children, and therapists through structured care pathways. Built from scratch as the sole systems architect.',
-          highlights: ['87 therapeutic game variants from a single codebase', 'Modular Data-Driven Runtime with 30–100+ components per game', 'Network-resilient evaluation with auto-save per question', 'Therapist-directed multiplayer with zero scene reloads', 'Full reconnection recovery via state snapshots', 'Zero mid-session GC stalls, stable 60fps on WebGL'],
+          highlights: ['170+ therapeutic game variants from a single codebase', 'Modular Data-Driven Runtime with 30–100+ components per game', 'Network-resilient evaluation with auto-save per question', 'Therapist-directed multiplayer with zero scene reloads', 'Full reconnection recovery via state snapshots', 'Zero mid-session GC stalls, stable 60fps on WebGL'],
           tags: ['Unity', 'WebGL', 'C#', 'Angular', 'Socket.IO', 'Mobile'], demoUrl: 'https://youtu.be/kp5x0duiZLI', featured: true, accentColor: '#4f8ef7',
         },
         {
@@ -56,7 +56,7 @@ export const translations = {
         {
           title: 'Memory-Constrained Runtime Engine', subtitle: 'Performance Engineering',
           description: 'Production memory engineering system for WebGL and mobile. Centralized destruction pipelines eliminate allocation spikes, with dedicated deserialization classes resolving JSON parsing bottlenecks.',
-          highlights: ['Centralized destruction pipelines', 'Dedicated JSON deserialization classes', 'IdentityComponent-first initialization pattern', 'Deterministic init across all 87 variants'],
+          highlights: ['Centralized destruction pipelines', 'Dedicated JSON deserialization classes', 'IdentityComponent-first initialization pattern', 'Deterministic init across all 170+ variants'],
           tags: ['Unity', 'WebGL', 'Mobile', 'Performance', 'Memory'], featured: false, accentColor: '#f59e0b',
         },
       ],
@@ -67,9 +67,9 @@ export const translations = {
       currentBadge: 'Current', teachingLabel: 'Teaching', recognitionLabel: 'Recognition', educationLabel: 'Education',
       items: [
         {
-          role: 'Senior Unity Systems Engineer', company: 'SgharToon', location: 'Tunis, Tunisia', period: '2020 – Present', current: true,
+          role: 'Senior Unity Systems Engineer', company: 'SgharToon', location: 'Tunis, Tunisia', period: '2018 – 2025', current: false,
           description: 'Lead systems architect on the SgharToon Platform — a therapeutic digital system for children with learning disorders. Responsible for the full technical architecture from initial design to production deployment.',
-          achievements: ['Designed and implemented the Modular Data-Driven Runtime Architecture', 'Built 87 therapeutic game variants from a single unified codebase', 'Engineered zero-GC-stall memory systems for WebGL and mobile', 'Developed transport-agnostic networking with therapist-authoritative sessions', 'Achieved deterministic session management across all platform variants', 'Integrated Angular web dashboard for real-time therapist supervision'],
+          achievements: ['Designed and implemented the Modular Data-Driven Runtime Architecture', 'Built 170+ therapeutic game variants from a single unified codebase', 'Engineered zero-GC-stall memory systems for WebGL and mobile', 'Developed transport-agnostic networking with therapist-authoritative sessions', 'Achieved deterministic session management across all platform variants', 'Integrated Angular web dashboard for real-time therapist supervision'],
           tags: ['Unity', 'C#', 'WebGL', 'Angular', 'Socket.IO', 'Architecture'],
         },
         {
@@ -84,7 +84,7 @@ export const translations = {
         { role: 'Unity 2D Trainer', institution: 'WeCode Land', level: 'Unity 2D Training', period: '2022 – 2023' },
       ],
       recognition: [{ title: 'Google for Startups', year: '2022' }, { title: 'Westerwelle Foundation', year: '2024' }, { title: 'LEAP Riyadh', year: '2025' }, { title: 'Soft Landing Marseille', year: '2025' }],
-      education: [{ degree: 'Engineering Degree — Computer Science', institution: 'Tunisia', period: '2015 – 2020', focus: 'Software engineering, systems design, algorithms' }],
+      education: [{ degree: 'Engineering Degree — Computer Science', institution: 'Tunisia', period: '2012 – 2018', focus: 'Software engineering, systems design, algorithms' }],
     },
     contact: {
       label: 'Contact', title: "Let's Work Together",
@@ -121,7 +121,7 @@ export const translations = {
       body2: "Depuis plusieurs années, je suis l'architecte principal de <strong>SgharToon</strong> — une plateforme thérapeutique numérique pour les enfants ayant des troubles d'apprentissage. J'ai conçu chaque couche de son architecture : du modèle de composants modulaires et du cycle de vie des sessions, jusqu'au système réseau à autorité thérapeute et au pipeline mémoire WebGL.",
       body3: "Ma philosophie est simple : <em>les exigences cliniques doivent être imposées structurellement, non par convention</em>. L'architecture doit rendre la chose incorrecte impossible, pas seulement déconseillée.",
       highlights: ["Autorité Thérapeute · Indépendant du Transport · Orienté Données", "Zéro gel GC en cours de session, 60fps stable sur WebGL", "Ouvert aux déplacements — Tunis, Tunisie"],
-      stats: [{ value: '8+', label: "Années d'expérience" }, { value: '87', label: 'Variantes créées' }, { value: '3', label: 'Rôles plateforme' }, { value: '0', label: 'Gels GC en session' }],
+      stats: [{ value: '8+', label: "Années d'expérience" }, { value: '170+', label: 'Variantes créées' }, { value: '3', label: 'Rôles plateforme' }, { value: '0', label: 'Gels GC en session' }],
       badge: { title: 'Plateforme SgharToon', sub: 'v9.0 — Production' },
     },
     skills: {
@@ -143,7 +143,7 @@ export const translations = {
         {
           title: 'Plateforme SgharToon', subtitle: 'Architecte Systèmes Principal',
           description: "Une plateforme thérapeutique numérique connectant parents, enfants et thérapeutes via des parcours de soins structurés. Conçue de zéro en tant que seul architecte systèmes.",
-          highlights: ['87 variantes de jeux thérapeutiques depuis une seule base de code', 'Runtime Modulaire Orienté Données avec 30 à 100+ composants par jeu', 'Évaluation résistante au réseau avec sauvegarde automatique par question', 'Multijoueur dirigé par le thérapeute sans rechargement de scène', "Reprise complète sur reconnexion via instantanés d'état", 'Zéro gel GC en session, 60fps stable sur WebGL'],
+          highlights: ['170+ variantes de jeux thérapeutiques depuis une seule base de code', 'Runtime Modulaire Orienté Données avec 30 à 100+ composants par jeu', 'Évaluation résistante au réseau avec sauvegarde automatique par question', 'Multijoueur dirigé par le thérapeute sans rechargement de scène', "Reprise complète sur reconnexion via instantanés d'état", 'Zéro gel GC en session, 60fps stable sur WebGL'],
           tags: ['Unity', 'WebGL', 'C#', 'Angular', 'Socket.IO', 'Mobile'], demoUrl: 'https://youtu.be/kp5x0duiZLI', featured: true, accentColor: '#4f8ef7',
         },
         {
@@ -155,7 +155,7 @@ export const translations = {
         {
           title: 'Moteur Runtime à Mémoire Contrainte', subtitle: 'Ingénierie Performance',
           description: "Système d'ingénierie mémoire pour WebGL et mobile. Les pipelines de destruction centralisés éliminent les pics d'allocation, avec des classes de désérialisation dédiées résolvant les goulots JSON.",
-          highlights: ['Pipelines de destruction centralisés', 'Classes de désérialisation JSON dédiées', "Pattern d'initialisation IdentityComponent-first", 'Init déterministe sur les 87 variantes'],
+          highlights: ['Pipelines de destruction centralisés', 'Classes de désérialisation JSON dédiées', "Pattern d'initialisation IdentityComponent-first", 'Init déterministe sur les 170+ variantes'],
           tags: ['Unity', 'WebGL', 'Mobile', 'Performance', 'Memory'], featured: false, accentColor: '#f59e0b',
         },
       ],
@@ -166,9 +166,9 @@ export const translations = {
       currentBadge: 'En cours', teachingLabel: 'Enseignement', recognitionLabel: 'Distinctions', educationLabel: 'Formation',
       items: [
         {
-          role: 'Ingénieur Unity Senior', company: 'SgharToon', location: 'Tunis, Tunisie', period: '2020 – Présent', current: true,
+          role: 'Ingénieur Unity Senior', company: 'SgharToon', location: 'Tunis, Tunisie', period: '2018 – 2025', current: false,
           description: "Architecte systèmes principal de SgharToon — un système thérapeutique numérique pour les enfants ayant des troubles d'apprentissage. Responsable de l'architecture technique complète.",
-          achievements: ["Conception et implémentation de l'Architecture Runtime Modulaire Orientée Données", '87 variantes de jeux depuis une seule base de code', "Ingénierie de systèmes mémoire sans gel GC pour WebGL et mobile", "Développement du réseau indépendant du transport avec sessions à autorité thérapeute", "Gestion déterministe des sessions sur toutes les variantes", "Intégration du tableau de bord Angular pour la supervision en temps réel"],
+          achievements: ["Conception et implémentation de l'Architecture Runtime Modulaire Orientée Données", '170+ variantes de jeux depuis une seule base de code', "Ingénierie de systèmes mémoire sans gel GC pour WebGL et mobile", "Développement du réseau indépendant du transport avec sessions à autorité thérapeute", "Gestion déterministe des sessions sur toutes les variantes", "Intégration du tableau de bord Angular pour la supervision en temps réel"],
           tags: ['Unity', 'C#', 'WebGL', 'Angular', 'Socket.IO', 'Architecture'],
         },
         {
@@ -183,7 +183,7 @@ export const translations = {
         { role: 'Formateur Unity 2D', institution: 'WeCode Land', level: 'Formation Unity 2D', period: '2022 – 2023' },
       ],
       recognition: [{ title: 'Google for Startups', year: '2022' }, { title: 'Westerwelle Foundation', year: '2024' }, { title: 'LEAP Riyadh', year: '2025' }, { title: 'Soft Landing Marseille', year: '2025' }],
-      education: [{ degree: "Diplôme d'Ingénieur — Informatique", institution: 'Tunisie', period: '2015 – 2020', focus: "Génie logiciel, conception de systèmes, algorithmique" }],
+      education: [{ degree: "Diplôme d'Ingénieur — Informatique", institution: 'Tunisie', period: '2012 – 2018', focus: "Génie logiciel, conception de systèmes, algorithmique" }],
     },
     contact: {
       label: 'Contact', title: 'Travaillons ensemble',
@@ -220,7 +220,7 @@ export const translations = {
       body2: 'على مدى السنوات الماضية، كنت المهندس المعماري الرئيسي لـ <strong>SgharToon</strong> — منصة علاجية رقمية للأطفال ذوي صعوبات التعلم. صمّمت كل طبقة من طبقاتها: من نموذج المكوّنات المعيارية ودورة حياة الجلسات، إلى نظام الشبكات ذي السلطة العلاجية وأنبوب الذاكرة WebGL.',
       body3: 'فلسفتي بسيطة: <em>يجب أن تُفرض المتطلبات السريرية هيكلياً، لا بالاتفاقية</em>. يجب أن تجعل المعمارية الشيء الخاطئ مستحيلاً، لا مجرد غير مستحسن.',
       highlights: ['سلطة المعالج · مستقل عن وسيلة النقل · مدفوع بالبيانات', 'لا توقفات GC أثناء الجلسة، 60fps مستقر على WebGL', 'منفتح على الانتقال — تونس'],
-      stats: [{ value: '8+', label: 'سنوات خبرة' }, { value: '87', label: 'نسخة لعبة مطوّرة' }, { value: '3', label: 'أدوار على المنصة' }, { value: '0', label: 'توقفات GC في الجلسة' }],
+      stats: [{ value: '8+', label: 'سنوات خبرة' }, { value: '170+', label: 'نسخة لعبة مطوّرة' }, { value: '3', label: 'أدوار على المنصة' }, { value: '0', label: 'توقفات GC في الجلسة' }],
       badge: { title: 'منصة SgharToon', sub: 'v9.0 — في الإنتاج' },
     },
     skills: {
@@ -242,7 +242,7 @@ export const translations = {
         {
           title: 'منصة SgharToon', subtitle: 'المهندس المعماري الرئيسي للأنظمة',
           description: 'منصة علاجية رقمية تربط الآباء والأطفال والمعالجين عبر مسارات رعاية منظّمة. بُنيت من الصفر بوصفي المهندس المعماري الوحيد.',
-          highlights: ['87 نسخة لعبة علاجية من قاعدة كود واحدة', 'بيئة تشغيل معيارية مدفوعة بالبيانات مع 30–100+ مكوّن لكل لعبة', 'تقييم متحمّل للشبكة مع حفظ تلقائي لكل سؤال', 'لعب جماعي يديره المعالج دون إعادة تحميل المشهد', 'استرداد كامل عند إعادة الاتصال عبر لقطات الحالة', 'لا توقفات GC أثناء الجلسة، 60fps مستقر على WebGL'],
+          highlights: ['170+ نسخة لعبة علاجية من قاعدة كود واحدة', 'بيئة تشغيل معيارية مدفوعة بالبيانات مع 30–100+ مكوّن لكل لعبة', 'تقييم متحمّل للشبكة مع حفظ تلقائي لكل سؤال', 'لعب جماعي يديره المعالج دون إعادة تحميل المشهد', 'استرداد كامل عند إعادة الاتصال عبر لقطات الحالة', 'لا توقفات GC أثناء الجلسة، 60fps مستقر على WebGL'],
           tags: ['Unity', 'WebGL', 'C#', 'Angular', 'Socket.IO', 'Mobile'], demoUrl: 'https://youtu.be/kp5x0duiZLI', featured: true, accentColor: '#4f8ef7',
         },
         {
@@ -254,7 +254,7 @@ export const translations = {
         {
           title: 'محرك التشغيل ذو الذاكرة المحدودة', subtitle: 'هندسة الأداء',
           description: 'نظام هندسة الذاكرة لبيئات WebGL والهاتف المحمول. أنابيب التدمير المركزية تُلغي ارتفاعات التخصيص، وفئات التحليل المخصصة تحل اختناقات JSON.',
-          highlights: ['أنابيب تدمير مركزية', 'فئات تحليل JSON مخصصة', 'نمط تهيئة IdentityComponent-first', 'تهيئة حتمية عبر 87 نسخة'],
+          highlights: ['أنابيب تدمير مركزية', 'فئات تحليل JSON مخصصة', 'نمط تهيئة IdentityComponent-first', 'تهيئة حتمية عبر 170+ نسخة'],
           tags: ['Unity', 'WebGL', 'Mobile', 'Performance', 'Memory'], featured: false, accentColor: '#f59e0b',
         },
       ],
@@ -265,9 +265,9 @@ export const translations = {
       currentBadge: 'حالياً', teachingLabel: 'التدريس', recognitionLabel: 'التكريمات', educationLabel: 'التعليم',
       items: [
         {
-          role: 'مهندس أنظمة Unity أول', company: 'SgharToon', location: 'تونس', period: '2020 – الحاضر', current: true,
+          role: 'مهندس أنظمة Unity أول', company: 'SgharToon', location: 'تونس', period: '2018 – 2025', current: false,
           description: 'المهندس المعماري الرئيسي لمنصة SgharToon — نظام علاجي رقمي للأطفال ذوي صعوبات التعلم. مسؤول عن المعمارية التقنية الكاملة من التصميم الأولي حتى النشر.',
-          achievements: ['تصميم وتنفيذ المعمارية المعيارية المدفوعة بالبيانات', '87 نسخة لعبة علاجية من قاعدة كود موحّدة', 'هندسة أنظمة ذاكرة بدون توقفات GC لـ WebGL والهاتف المحمول', 'تطوير شبكة مستقلة عن وسيلة النقل مع جلسات بسلطة المعالج', 'إدارة جلسات حتمية عبر جميع نسخ المنصة', 'دمج لوحة تحكم Angular للإشراف الفوري'],
+          achievements: ['تصميم وتنفيذ المعمارية المعيارية المدفوعة بالبيانات', '170+ نسخة لعبة علاجية من قاعدة كود موحّدة', 'هندسة أنظمة ذاكرة بدون توقفات GC لـ WebGL والهاتف المحمول', 'تطوير شبكة مستقلة عن وسيلة النقل مع جلسات بسلطة المعالج', 'إدارة جلسات حتمية عبر جميع نسخ المنصة', 'دمج لوحة تحكم Angular للإشراف الفوري'],
           tags: ['Unity', 'C#', 'WebGL', 'Angular', 'Socket.IO', 'Architecture'],
         },
         {
@@ -282,7 +282,7 @@ export const translations = {
         { role: 'مدرّب Unity 2D', institution: 'WeCode Land', level: 'تدريب Unity 2D', period: '2022 – 2023' },
       ],
       recognition: [{ title: 'Google for Startups', year: '2022' }, { title: 'Westerwelle Foundation', year: '2024' }, { title: 'LEAP Riyadh', year: '2025' }, { title: 'Soft Landing Marseille', year: '2025' }],
-      education: [{ degree: 'شهادة مهندس — علوم الحاسوب', institution: 'تونس', period: '2015 – 2020', focus: 'هندسة البرمجيات، تصميم الأنظمة، الخوارزميات' }],
+      education: [{ degree: 'شهادة مهندس — علوم الحاسوب', institution: 'تونس', period: '2012 – 2018', focus: 'هندسة البرمجيات، تصميم الأنظمة، الخوارزميات' }],
     },
     contact: {
       label: 'التواصل', title: 'لنعمل معاً',
