@@ -36,44 +36,40 @@
   color: var(--text-primary);
 }
 
-.skill-list {
+.skill-pills {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
-.skill-item {}
-
-.skill-info {
+.skill-pill {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 0.4rem;
+  gap: 0.5rem;
+  padding: 0.45rem 0.75rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition: border-color 0.2s;
+
+  &:hover {
+    border-color: var(--border-bright);
+  }
 }
 
 .skill-name {
   font-size: 0.85rem;
   color: var(--text-secondary);
+  font-weight: 500;
 }
 
-.skill-pct {
-  font-size: 0.75rem;
+.skill-note {
+  font-size: 0.72rem;
   color: var(--text-muted);
   font-family: 'JetBrains Mono', monospace;
-}
-
-.skill-bar {
-  height: 4px;
-  background: rgba(255, 255, 255, 0.06);
-  border-radius: 2px;
-  overflow: hidden;
-}
-
-.skill-fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--accent) 0%, #8ab8ff 100%);
-  border-radius: 2px;
-  transition: width 1s ease;
+  text-align: right;
+  flex-shrink: 0;
 }
 
 .languages-section {

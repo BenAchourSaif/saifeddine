@@ -10,15 +10,10 @@
           <span class="category-icon">{{ cat.icon }}</span>
           <h3 class="category-name">{{ cat.name }}</h3>
         </div>
-        <div class="skill-list">
-          <div class="skill-item" *ngFor="let skill of cat.skills">
-            <div class="skill-info">
-              <span class="skill-name">{{ skill.name }}</span>
-              <span class="skill-pct">{{ skill.level }}%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-fill" [style.width.%]="skill.level"></div>
-            </div>
+        <div class="skill-pills">
+          <div class="skill-pill" *ngFor="let skill of cat.skills">
+            <span class="skill-name">{{ skill.name }}</span>
+            <span class="skill-note" *ngIf="$any(skill).note">{{ $any(skill).note }}</span>
           </div>
         </div>
       </div>
