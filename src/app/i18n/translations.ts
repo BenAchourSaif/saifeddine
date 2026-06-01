@@ -65,7 +65,7 @@ export const translations = {
         },
       ],
       languagesLabel: 'Languages',
-      languages: ['French (Native)', 'Arabic (Native)', 'English (Professional)'],
+      languages: ['French — Native (C1)', 'Arabic — Native', 'English — Professional (B2+)'],
     },
     projects: {
       label: 'Work', title: 'Projects & Systems',
@@ -115,7 +115,7 @@ export const translations = {
       currentBadge: 'Current', teachingLabel: 'Teaching', recognitionLabel: 'Recognition', educationLabel: 'Education',
       items: [
         {
-          role: 'Co-founder & Lead Unity Engineer', company: 'Sphèrion — SgharToon Platform', location: 'Tunis, Tunisia', period: '2018 – Present', current: true,
+          role: 'Co-founder & Lead Unity Engineer', company: 'Sphèrion — SgharToon Platform', location: 'Tunis, Tunisia', period: 'Oct. 2017 – Present', current: true,
           description: 'Lead systems architect on the SgharToon Platform — a therapeutic digital system for children with learning disorders. Responsible for the full technical architecture from initial design to production deployment.',
           achievements: [
             'Architected a data-driven runtime powering 170+ interactive modules from a single codebase',
@@ -127,6 +127,16 @@ export const translations = {
             'Designed and integrated the Angular dashboard for real-time therapist supervision',
           ],
           tags: ['Unity', 'C#', 'WebGL', 'Angular', 'Socket.IO', 'Architecture'],
+        },
+        {
+          role: 'C# Developer — Simulation & Integration', company: 'Badiya — Interactive WebGL Application', location: '', period: '2022 – 2023', current: false,
+          description: 'WebGL application with a configurable simulation engine and performance constraints close to embedded/mobile context.',
+          achievements: [
+            'Designed a configurable simulation engine: parameterizable behavioral logic, on-demand scenario generation — extensible API-driven architecture',
+            'Optimized Unity rendering pipeline for stable 60fps on mid-range browsers',
+            'Implemented C#–JavaScript bridge for real-time interoperability with the web layer',
+          ],
+          tags: ['Unity', 'WebGL', 'C#', 'Simulation', 'JavaScript'],
         },
         {
           role: 'Client Project — Industrial 3D WebGL Viewer', company: 'Industrial Quality Management Solution', location: '', period: '2019', current: false,
@@ -164,14 +174,20 @@ export const translations = {
         {
           degree: 'Engineering Degree (Bac+5) — Digital Imaging & Virtual Reality (INREV)',
           institution: 'ISAMM — Institut Supérieur des Arts Multimédia de la Manouba',
-          period: '2012 – 2018',
+          period: '2015 – 2018',
           focus: 'Real-time 3D, virtual reality, game systems, software engineering',
+        },
+        {
+          degree: 'Bachelor — Multimedia Computer Science',
+          institution: 'ISAMM — Institut Supérieur des Arts Multimédia de la Manouba',
+          period: '2012 – 2015',
+          focus: 'Multimedia development, interactive systems, digital arts',
         },
       ],
     },
     contact: {
       label: 'Contact', title: "Let's Work Together",
-      subtitle: 'Open to senior Unity engineering roles in France (CDI preferred). Available from September 2026.',
+      subtitle: 'Open to senior Unity / C# engineering roles. Immediately available — open to remote or relocation.',
       formTitle: 'Send a Message', nameLabel: 'Name', emailLabel: 'Email', messageLabel: 'Message',
       namePlaceholder: 'Your name', emailPlaceholder: 'your@email.com', messagePlaceholder: 'Tell me about the opportunity…',
       submit: 'Send Message', sentTitle: 'Message sent!', sentBody: "Thanks for reaching out. I'll get back to you shortly.",
@@ -254,7 +270,7 @@ export const translations = {
         },
       ],
       languagesLabel: 'Langues',
-      languages: ['Français (natif)', 'Arabe (natif)', 'Anglais (professionnel)'],
+      languages: ['Français — Natif (C1)', 'Arabe — Natif', 'Anglais — Professionnel (B2+)'],
     },
     projects: {
       label: 'Travaux', title: 'Projets & Systèmes',
@@ -304,7 +320,7 @@ export const translations = {
       currentBadge: 'En cours', teachingLabel: 'Enseignement', recognitionLabel: 'Distinctions', educationLabel: 'Formation',
       items: [
         {
-          role: 'Co-fondateur & Lead Unity Engineer', company: 'Sphèrion — SgharToon Platform', location: 'Tunis, Tunisie', period: '2018 – Présent', current: true,
+          role: 'Co-fondateur & Lead Unity Engineer', company: 'Sphèrion — SgharToon Platform', location: 'Tunis, Tunisie', period: 'Oct. 2017 – Présent', current: true,
           description: "Architecte systèmes principal de SgharToon — un système thérapeutique numérique pour les enfants ayant des troubles d'apprentissage. Responsable de l'architecture technique complète.",
           achievements: [
             "Architecturé un runtime orienté données alimentant 170+ modules interactifs depuis une seule base de code",
@@ -316,6 +332,16 @@ export const translations = {
             'Conception et intégration du tableau de bord Angular pour supervision en temps réel',
           ],
           tags: ['Unity', 'C#', 'WebGL', 'Angular', 'Socket.IO', 'Architecture'],
+        },
+        {
+          role: 'Développeur C# Simulation & Intégration', company: 'Badiya — Application Interactive WebGL', location: '', period: '2022 – 2023', current: false,
+          description: "Application déployée via WebGL avec moteur de simulation configurable et contraintes de performance proches du contexte embarqué/mobile.",
+          achievements: [
+            "Conception d'un moteur de simulation configurable : logique comportementale paramétrable, génération de scénarios à la demande — architecture API-driven extensible",
+            'Optimisation du pipeline de rendu Unity pour 60 FPS stable sur navigateurs mid-range',
+            'Implémentation du bridge C#–JavaScript pour interopérabilité temps réel avec la couche web',
+          ],
+          tags: ['Unity', 'WebGL', 'C#', 'Simulation', 'JavaScript'],
         },
         {
           role: 'Projet Client — Visualiseur 3D WebGL Industriel', company: 'Solution Contrôle Qualité Industriel', location: '', period: '2019', current: false,
@@ -351,16 +377,22 @@ export const translations = {
       ],
       education: [
         {
-          degree: "Diplôme d'Ingénieur (Bac+5) — Imagerie Numérique & Réalité Virtuelle (INREV)",
+          degree: "Diplôme d'Ingénieur (Bac+5) — Spécialisation INREV",
           institution: 'ISAMM — Institut Supérieur des Arts Multimédia de la Manouba',
-          period: '2012 – 2018',
+          period: '2015 – 2018',
           focus: '3D temps réel, réalité virtuelle, game systems, génie logiciel',
+        },
+        {
+          degree: 'Licence en Informatique Multimédia',
+          institution: 'ISAMM — Institut Supérieur des Arts Multimédia de la Manouba',
+          period: '2012 – 2015',
+          focus: 'Développement multimédia, systèmes interactifs, arts numériques',
         },
       ],
     },
     contact: {
       label: 'Contact', title: 'Travaillons ensemble',
-      subtitle: "Ouvert à des postes Senior Unity en France (CDI privilégié). Disponible à partir de septembre 2026.",
+      subtitle: "Disponible immédiatement — ouvert au full remote ou à la relocalisation.",
       formTitle: 'Envoyer un message', nameLabel: 'Nom', emailLabel: 'Email', messageLabel: 'Message',
       namePlaceholder: 'Votre nom', emailPlaceholder: 'vous@email.com', messagePlaceholder: "Parlez-moi de l'opportunité…",
       submit: 'Envoyer le message', sentTitle: 'Message envoyé !', sentBody: "Merci de m'avoir contacté. Je vous répondrai rapidement.",
@@ -443,7 +475,7 @@ export const translations = {
         },
       ],
       languagesLabel: 'اللغات',
-      languages: ['الفرنسية (لغة أم)', 'العربية (لغة أم)', 'الإنجليزية (مهني)'],
+      languages: ['الفرنسية — لغة أم (C1)', 'العربية — لغة أم', 'الإنجليزية — مهني (B2+)'],
     },
     projects: {
       label: 'الأعمال', title: 'المشاريع والأنظمة',
@@ -493,7 +525,7 @@ export const translations = {
       currentBadge: 'حالياً', teachingLabel: 'التدريس', recognitionLabel: 'التكريمات', educationLabel: 'التعليم',
       items: [
         {
-          role: 'شريك مؤسس ومهندس Unity رئيسي', company: 'Sphèrion — SgharToon Platform', location: 'تونس', period: '2018 – الحاضر', current: true,
+          role: 'شريك مؤسس ومهندس Unity رئيسي', company: 'Sphèrion — SgharToon Platform', location: 'تونس', period: 'أكت. 2017 – الحاضر', current: true,
           description: 'المهندس المعماري الرئيسي لمنصة SgharToon — نظام علاجي رقمي للأطفال ذوي صعوبات التعلم. مسؤول عن المعمارية التقنية الكاملة من التصميم الأولي حتى النشر.',
           achievements: [
             'بناء بيئة تشغيل مدفوعة بالبيانات تشغّل 170+ وحدة تفاعلية من قاعدة كود واحدة',
@@ -505,6 +537,16 @@ export const translations = {
             'تصميم ودمج لوحة تحكم Angular للإشراف الفوري للمعالجين',
           ],
           tags: ['Unity', 'C#', 'WebGL', 'Angular', 'Socket.IO', 'Architecture'],
+        },
+        {
+          role: 'مطور C# محاكاة وتكامل', company: 'Badiya — تطبيق WebGL تفاعلي', location: '', period: '2022 – 2023', current: false,
+          description: 'تطبيق WebGL مع محرك محاكاة قابل للضبط وقيود أداء قريبة من السياق المدمج/الجوّال.',
+          achievements: [
+            'تصميم محرك محاكاة قابل للضبط: منطق سلوكي معامِلي، توليد سيناريوهات عند الطلب — معمارية API-driven قابلة للتوسع',
+            '60fps مستقر على المتصفحات متوسطة المستوى عبر تحسين أنبوب عرض Unity',
+            'تنفيذ جسر C#–JavaScript للتشغيل البيني الفوري مع طبقة الويب',
+          ],
+          tags: ['Unity', 'WebGL', 'C#', 'Simulation', 'JavaScript'],
         },
         {
           role: 'مشروع عميل — عارض ثلاثي الأبعاد WebGL صناعي', company: 'حل إدارة الجودة الصناعية', location: '', period: '2019', current: false,
@@ -540,16 +582,22 @@ export const translations = {
       ],
       education: [
         {
-          degree: 'شهادة مهندس (Bac+5) — التصوير الرقمي والواقع الافتراضي (INREV)',
+          degree: 'شهادة مهندس (Bac+5) — تخصص INREV',
           institution: 'ISAMM — المعهد العالي للفنون الوسائطية بمنوبة',
-          period: '2012 – 2018',
+          period: '2015 – 2018',
           focus: 'ثلاثية الأبعاد الفورية، الواقع الافتراضي، أنظمة الألعاب، هندسة البرمجيات',
+        },
+        {
+          degree: 'إجازة في الإعلامية الوسائطية',
+          institution: 'ISAMM — المعهد العالي للفنون الوسائطية بمنوبة',
+          period: '2012 – 2015',
+          focus: 'التطوير الوسائطي، الأنظمة التفاعلية، الفنون الرقمية',
         },
       ],
     },
     contact: {
       label: 'التواصل', title: 'لنعمل معاً',
-      subtitle: 'منفتح على أدوار Unity الأولى في فرنسا (CDI مفضّل). متاح اعتباراً من سبتمبر 2026.',
+      subtitle: 'متاح فوراً — منفتح على العمل عن بُعد أو الانتقال.',
       formTitle: 'أرسل رسالة', nameLabel: 'الاسم', emailLabel: 'البريد الإلكتروني', messageLabel: 'الرسالة',
       namePlaceholder: 'اسمك', emailPlaceholder: 'بريدك@الإلكتروني', messagePlaceholder: 'أخبرني عن الفرصة...',
       submit: 'إرسال الرسالة', sentTitle: 'تم إرسال الرسالة!', sentBody: 'شكراً على تواصلك. سأعود إليك قريباً.',
