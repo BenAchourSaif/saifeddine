@@ -8,7 +8,7 @@ import { LanguageService } from '../../../app/services/language.service';
 // 2. Enter:  saifeddine.benachour@gmail.com
 // 3. Click "Create Access Key" → check your inbox
 // 4. Paste the key below and push
-const WEB3FORMS_KEY = 'YOUR_ACCESS_KEY';
+const WEB3FORMS_KEY = '605194e3-c8e7-4ab8-ba5f-5a786c4723b2';
 // ─────────────────────────────────────────────────────────────────────────────
 
 @Component({
