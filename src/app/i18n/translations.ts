@@ -115,7 +115,7 @@ export const translations = {
       currentBadge: 'Current', teachingLabel: 'Teaching', recognitionLabel: 'Recognition', educationLabel: 'Education',
       items: [
         {
-          role: 'Co-founder & Lead Unity Engineer', company: 'Sphèrion — SgharToon Platform', location: 'Tunis, Tunisia', period: 'Oct. 2017 – Present', current: true,
+          role: 'Co-founder & Lead Unity Engineer', company: 'SgharToon', location: 'Tunis, Tunisia', period: 'Oct. 2017 – Dec. 2025', current: false,
           description: 'Lead systems architect on the SgharToon Platform — a therapeutic digital system for children with learning disorders. Responsible for the full technical architecture from initial design to production deployment.',
           achievements: [
             'Architected a data-driven runtime powering 170+ interactive modules from a single codebase',
@@ -320,7 +320,7 @@ export const translations = {
       currentBadge: 'En cours', teachingLabel: 'Enseignement', recognitionLabel: 'Distinctions', educationLabel: 'Formation',
       items: [
         {
-          role: 'Co-fondateur & Lead Unity Engineer', company: 'Sphèrion — SgharToon Platform', location: 'Tunis, Tunisie', period: 'Oct. 2017 – Présent', current: true,
+          role: 'Co-fondateur & Lead Unity Engineer', company: 'SgharToon', location: 'Tunis, Tunisie', period: 'Oct. 2017 – Déc. 2025', current: false,
           description: "Architecte systèmes principal de SgharToon — un système thérapeutique numérique pour les enfants ayant des troubles d'apprentissage. Responsable de l'architecture technique complète.",
           achievements: [
             "Architecturé un runtime orienté données alimentant 170+ modules interactifs depuis une seule base de code",
@@ -525,7 +525,7 @@ export const translations = {
       currentBadge: 'حالياً', teachingLabel: 'التدريس', recognitionLabel: 'التكريمات', educationLabel: 'التعليم',
       items: [
         {
-          role: 'شريك مؤسس ومهندس Unity رئيسي', company: 'Sphèrion — SgharToon Platform', location: 'تونس', period: 'أكت. 2017 – الحاضر', current: true,
+          role: 'شريك مؤسس ومهندس Unity رئيسي', company: 'SgharToon', location: 'تونس', period: 'أكت. 2017 – ديس. 2025', current: false,
           description: 'المهندس المعماري الرئيسي لمنصة SgharToon — نظام علاجي رقمي للأطفال ذوي صعوبات التعلم. مسؤول عن المعمارية التقنية الكاملة من التصميم الأولي حتى النشر.',
           achievements: [
             'بناء بيئة تشغيل مدفوعة بالبيانات تشغّل 170+ وحدة تفاعلية من قاعدة كود واحدة',
