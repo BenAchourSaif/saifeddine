@@ -6,7 +6,7 @@ export const translations = {
       roles: ['Unity Systems Engineer', 'Runtime & Tools Architect'],
       tagline: 'Building modular, data-driven runtime architectures for Unity, WebGL & mobile.<br>8+ years shipping production systems — from gaming to serious games.',
       btnWork: 'View My Work', btnContact: 'Get In Touch', btnPortfolio: 'Portfolio', btnCV: 'CV',
-      location: 'Tunis, Tunisia · Open to relocation in France', linkedin: 'LinkedIn', demo: 'Portfolio Demo',
+      location: 'Tunis, Tunisia · Open to relocation worldwide', linkedin: 'LinkedIn', demo: 'Portfolio Demo',
     },
     about: {
       label: 'About Me',
@@ -17,7 +17,7 @@ export const translations = {
       highlights: [
         'Production: 2,400+ users · 99.7% uptime · 60fps on low-end Android',
         "Master's-level lecturer: C#, Java, Unity (ISAMM, Tunisia)",
-        'Open to relocation in France — Soft Landing Marseille 2025 alumnus',
+        'Open to relocation worldwide — Soft Landing Marseille 2025 alumnus',
       ],
       stats: [
         { value: '8+', label: 'Years Experience' },
@@ -194,7 +194,7 @@ export const translations = {
       links: [
         { label: 'LinkedIn', value: 'linkedin.com/in/saif-eddine-ben-achour', href: 'https://linkedin.com/in/saif-eddine-ben-achour', icon: 'li' },
         { label: 'YouTube Demo', value: 'SgharToon Portfolio', href: 'https://youtu.be/kp5x0duiZLI', icon: 'yt' },
-        { label: 'Location', value: 'Tunis, Tunisia · Open to relocation in France', href: null, icon: 'loc' },
+        { label: 'Location', value: 'Tunis, Tunisia · Open to relocation worldwide', href: null, icon: 'loc' },
       ],
       downloads: [
         { label: 'Watch Portfolio Demo', href: 'https://youtu.be/kp5x0duiZLI', download: false },
@@ -211,7 +211,7 @@ export const translations = {
       roles: ['Ingénieur Unity Systèmes', 'Architecte Runtime & Outils'],
       tagline: "Conception d'architectures runtime modulaires et orientées données pour Unity, WebGL et mobile.<br>8+ ans à livrer des systèmes en production — du jeu vidéo aux serious games.",
       btnWork: 'Voir mes travaux', btnContact: 'Me contacter', btnPortfolio: 'Portfolio', btnCV: 'CV',
-      location: 'Tunis, Tunisie · Mobilité France (Île-de-France privilégiée)', linkedin: 'LinkedIn', demo: 'Démo Portfolio',
+      location: 'Tunis, Tunisie · Ouvert à la relocalisation partout dans le monde', linkedin: 'LinkedIn', demo: 'Démo Portfolio',
     },
     about: {
       label: 'À propos',
@@ -222,7 +222,7 @@ export const translations = {
       highlights: [
         'Production : 2 400+ utilisateurs · 99,7% uptime · 60fps sur Android bas de gamme',
         'Enseignant niveau Master : C#, Java, Unity (ISAMM, Tunisie)',
-        'Mobilité France — alumnus Soft Landing Marseille 2025',
+        'Mobilité internationale — alumnus Soft Landing Marseille 2025',
       ],
       stats: [
         { value: '8+', label: "Années d'expérience" },
@@ -399,7 +399,7 @@ export const translations = {
       links: [
         { label: 'LinkedIn', value: 'linkedin.com/in/saif-eddine-ben-achour', href: 'https://linkedin.com/in/saif-eddine-ben-achour', icon: 'li' },
         { label: 'Démo YouTube', value: 'Portfolio SgharToon', href: 'https://youtu.be/kp5x0duiZLI', icon: 'yt' },
-        { label: 'Localisation', value: 'Tunis, Tunisie · Mobilité France', href: null, icon: 'loc' },
+        { label: 'Localisation', value: 'Tunis, Tunisie · Mobilité internationale', href: null, icon: 'loc' },
       ],
       downloads: [
         { label: 'Voir la démo portfolio', href: 'https://youtu.be/kp5x0duiZLI', download: false },
@@ -416,7 +416,7 @@ export const translations = {
       roles: ['مهندس أنظمة Unity', 'مهندس Runtime وأدوات'],
       tagline: 'بناء معماريات تشغيل معيارية تعتمد على البيانات لـ Unity وWebGL والهاتف المحمول.<br>أكثر من 8 سنوات في تطوير أنظمة إنتاج — من الألعاب إلى الألعاب الجادة.',
       btnWork: 'اطّلع على أعمالي', btnContact: 'تواصل معي', btnPortfolio: 'ملف الأعمال', btnCV: 'السيرة الذاتية',
-      location: 'تونس · منفتح على الانتقال إلى فرنسا', linkedin: 'LinkedIn', demo: 'عرض ملف الأعمال',
+      location: 'تونس · منفتح على الانتقال إلى أي مكان في العالم', linkedin: 'LinkedIn', demo: 'عرض ملف الأعمال',
     },
     about: {
       label: 'نبذة عني',
@@ -427,7 +427,7 @@ export const translations = {
       highlights: [
         'الإنتاج: 2,400+ مستخدم · 99.7% وقت تشغيل · 60fps على Android المنخفض',
         'محاضر على مستوى الماجستير: C# وJava وUnity (ISAMM، تونس)',
-        'منفتح على الانتقال إلى فرنسا — خريج Soft Landing Marseille 2025',
+        'منفتح على الانتقال إلى أي مكان — خريج Soft Landing Marseille 2025',
       ],
       stats: [
         { value: '8+', label: 'سنوات خبرة' },
@@ -604,7 +604,7 @@ export const translations = {
       links: [
         { label: 'LinkedIn', value: 'linkedin.com/in/saif-eddine-ben-achour', href: 'https://linkedin.com/in/saif-eddine-ben-achour', icon: 'li' },
         { label: 'عرض YouTube', value: 'محفظة SgharToon', href: 'https://youtu.be/kp5x0duiZLI', icon: 'yt' },
-        { label: 'الموقع', value: 'تونس · منفتح على الانتقال إلى فرنسا', href: null, icon: 'loc' },
+        { label: 'الموقع', value: 'تونس · منفتح على الانتقال إلى أي مكان', href: null, icon: 'loc' },
       ],
       downloads: [
         { label: 'مشاهدة عرض ملف الأعمال', href: 'https://youtu.be/kp5x0duiZLI', download: false },
