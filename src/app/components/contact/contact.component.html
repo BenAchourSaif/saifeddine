@@ -51,10 +51,20 @@
               <label for="message">{{ ls.t().contact.messageLabel }}</label>
               <textarea id="message" name="message" [(ngModel)]="form.message" [placeholder]="ls.t().contact.messagePlaceholder" rows="5" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary submit-btn" [disabled]="f.invalid">
-              {{ ls.t().contact.submit }}
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            <button type="submit" class="btn btn-primary submit-btn" [disabled]="f.invalid || sending">
+              <span *ngIf="!sending">
+                {{ ls.t().contact.submit }}
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </span>
+              <span *ngIf="sending" class="sending-label">
+                <svg class="spin" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0 1 10 10"/></svg>
+                Sending…
+              </span>
             </button>
+            <p class="form-error" *ngIf="error">
+              ⚠ Something went wrong. Please try again or email directly at
+              <a href="mailto:saifeddine.benachour&#64;gmail.com">saifeddine.benachour&#64;gmail.com</a>
+            </p>
           </form>
         </div>
         <ng-template #thankYou>
