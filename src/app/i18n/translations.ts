@@ -192,6 +192,8 @@ export const translations = {
       namePlaceholder: 'Your name', emailPlaceholder: 'your@email.com', messagePlaceholder: 'Tell me about the opportunity…',
       submit: 'Send Message', sentTitle: 'Message sent!', sentBody: "Thanks for reaching out. I'll get back to you shortly.",
       links: [
+        { label: 'Email', value: 'saifeddine.benachour@gmail.com', href: 'mailto:saifeddine.benachour@gmail.com', icon: 'email' },
+        { label: 'Phone', value: '+216 50 989 000', href: 'tel:+21650989000', icon: 'phone' },
         { label: 'LinkedIn', value: 'linkedin.com/in/saif-eddine-ben-achour', href: 'https://linkedin.com/in/saif-eddine-ben-achour', icon: 'li' },
         { label: 'YouTube Demo', value: 'SgharToon Portfolio', href: 'https://youtu.be/kp5x0duiZLI', icon: 'yt' },
         { label: 'Location', value: 'Tunis, Tunisia · Open to relocation worldwide', href: null, icon: 'loc' },
@@ -397,6 +399,8 @@ export const translations = {
       namePlaceholder: 'Votre nom', emailPlaceholder: 'vous@email.com', messagePlaceholder: "Parlez-moi de l'opportunité…",
       submit: 'Envoyer le message', sentTitle: 'Message envoyé !', sentBody: "Merci de m'avoir contacté. Je vous répondrai rapidement.",
       links: [
+        { label: 'Email', value: 'saifeddine.benachour@gmail.com', href: 'mailto:saifeddine.benachour@gmail.com', icon: 'email' },
+        { label: 'Téléphone', value: '+216 50 989 000', href: 'tel:+21650989000', icon: 'phone' },
         { label: 'LinkedIn', value: 'linkedin.com/in/saif-eddine-ben-achour', href: 'https://linkedin.com/in/saif-eddine-ben-achour', icon: 'li' },
         { label: 'Démo YouTube', value: 'Portfolio SgharToon', href: 'https://youtu.be/kp5x0duiZLI', icon: 'yt' },
         { label: 'Localisation', value: 'Tunis, Tunisie · Mobilité internationale', href: null, icon: 'loc' },
@@ -602,6 +606,8 @@ export const translations = {
       namePlaceholder: 'اسمك', emailPlaceholder: 'بريدك@الإلكتروني', messagePlaceholder: 'أخبرني عن الفرصة...',
       submit: 'إرسال الرسالة', sentTitle: 'تم إرسال الرسالة!', sentBody: 'شكراً على تواصلك. سأعود إليك قريباً.',
       links: [
+        { label: 'البريد الإلكتروني', value: 'saifeddine.benachour@gmail.com', href: 'mailto:saifeddine.benachour@gmail.com', icon: 'email' },
+        { label: 'الهاتف', value: '+216 50 989 000', href: 'tel:+21650989000', icon: 'phone' },
         { label: 'LinkedIn', value: 'linkedin.com/in/saif-eddine-ben-achour', href: 'https://linkedin.com/in/saif-eddine-ben-achour', icon: 'li' },
         { label: 'عرض YouTube', value: 'محفظة SgharToon', href: 'https://youtu.be/kp5x0duiZLI', icon: 'yt' },
         { label: 'الموقع', value: 'تونس · منفتح على الانتقال إلى أي مكان', href: null, icon: 'loc' },
