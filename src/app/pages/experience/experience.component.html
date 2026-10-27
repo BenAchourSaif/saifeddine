@@ -1,0 +1,57 @@
+@let t = c();
+<section class="section section--tight">
+  <div class="page">
+    <span class="eyebrow">{{ t.ui.experienceEyebrow }}</span>
+    <h1>{{ t.ui.experienceTitle }}</h1>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="page timeline">
+    @for (r of t.experience; track r.title) {
+      <article class="card role">
+        <div class="role__head">
+          <h3>{{ r.title }}</h3>
+          <span class="badge">{{ r.period }}</span>
+        </div>
+        <p class="role__org">{{ r.org }}</p>
+        <ul>
+          @for (p of r.points; track p) {
+            <li>{{ p }}</li>
+          }
+        </ul>
+        @if (r.stack) {
+          <p class="chips">
+            @for (s of r.stack; track s) {
+              <span class="badge badge--accent">{{ s }}</span>
+            }
+          </p>
+        }
+      </article>
+    }
+  </div>
+</section>
+
+<section class="section">
+  <div class="page">
+    <span class="eyebrow">{{ t.ui.agileEyebrow }}</span>
+    <h2>{{ t.ui.agileTitle }}</h2>
+    <div class="grid-2">
+      @for (l of t.agile; track l.title) {
+        <div class="card"><h3>{{ l.title }}</h3><p>{{ l.body }}</p></div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="page">
+    <span class="eyebrow">{{ t.ui.educationEyebrow }}</span>
+    <h2>{{ t.ui.educationTitle }}</h2>
+    <ul class="certs">
+      @for (e of t.education; track e.title) {
+        <li><strong>{{ e.title }}</strong> · {{ e.period }}</li>
+      }
+    </ul>
+  </div>
+</section>

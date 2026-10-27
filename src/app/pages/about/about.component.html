@@ -1,0 +1,105 @@
+@let t = c();
+<section class="section section--tight">
+  <div class="page">
+    <span class="eyebrow">{{ t.ui.aboutEyebrow }}</span>
+    <h1>{{ site.candidateName }}</h1>
+    @for (p of t.bio.paragraphs; track p) {
+      <p class="bio-text">{{ p }}</p>
+    }
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="page grid-3">
+    @for (f of t.bio.facts; track f.label) {
+      <div class="card">
+        <span class="eyebrow">{{ f.label }}</span>
+        <p>{{ f.value }}</p>
+      </div>
+    }
+  </div>
+</section>
+
+<section class="section">
+  <div class="page grid-2">
+    <div class="card">
+      <h2>{{ t.ui.contactTitle }}</h2>
+      <div class="video-links">
+        @if (site.email) { <a [href]="'mailto:' + site.email" dir="ltr">{{ site.email }}</a> }
+        @if (site.phone) { <a [href]="'tel:' + site.phone.replaceAll(' ', '')" dir="ltr">{{ site.phone }}</a> }
+        @if (site.linkedinUrl) { <a [href]="site.linkedinUrl" target="_blank" rel="noopener">LinkedIn ↗</a> }
+        @if (site.githubUrl) { <a [href]="site.githubUrl" target="_blank" rel="noopener">GitHub ↗</a> }
+      </div>
+      <a class="btn btn--primary" [href]="cvUrl()" download>{{ t.ui.downloadCv }}</a>
+    </div>
+
+    <div class="card">
+      <h2>{{ t.ui.teachingTitle }}</h2>
+      <p>{{ t.teaching }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="page">
+    <div class="card form-card">
+      <h2>{{ t.ui.formTitle }}</h2>
+      @if (status === 'sent') {
+        <p class="form-ok">{{ t.ui.formSent }}</p>
+      } @else {
+        <form (ngSubmit)="submit()" #f="ngForm">
+          <input type="text" name="name" [(ngModel)]="form.name" [placeholder]="t.ui.formName" required autocomplete="name" />
+          <input type="email" name="email" [(ngModel)]="form.email" [placeholder]="t.ui.formEmail" required autocomplete="email" />
+          <textarea name="message" [(ngModel)]="form.message" [placeholder]="t.ui.formMessage" rows="5" required></textarea>
+          <button class="btn btn--primary" type="submit" [disabled]="f.invalid || status === 'sending'">
+            {{ status === 'sending' ? t.ui.formSending : t.ui.formSend }}
+          </button>
+          @if (status === 'error') {
+            <p class="form-error">{{ t.ui.formError }}</p>
+          }
+        </form>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="page">
+    <h2>{{ t.ui.recognitionTitle }}</h2>
+    <div class="grid-2">
+      @for (r of t.recognition; track r.title) {
+        <div class="card">
+          <span class="badge">{{ r.year }}</span>
+          <h3>{{ r.title }}</h3>
+          <p>{{ r.org }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="page">
+    <h2>{{ t.ui.deliverablesTitle }}</h2>
+    <ul class="deliverables">
+      <li>
+        <strong>Adeeb — StoryStudio</strong>
+        @if (site.repoStoryforgeUrl) {
+          (<a [href]="site.repoStoryforgeUrl" target="_blank" rel="noopener" dir="ltr">{{ site.repoStoryforge }} ↗</a>),
+        } @else {
+          ({{ site.repoStoryforge }}),
+        }
+        <a routerLink="/task-1-story-creation">{{ t.ui.unityDemoLink }}</a>
+      </li>
+      <li>
+        <strong>Search &amp; Content Discovery</strong>
+        @if (site.repoContentDiscoveryUrl) {
+          (<a [href]="site.repoContentDiscoveryUrl" target="_blank" rel="noopener" dir="ltr">{{ site.repoContentDiscovery }} ↗</a>),
+        } @else {
+          ({{ site.repoContentDiscovery }} — {{ t.ui.notPushed }}),
+        }
+        <a routerLink="/task-2-search">{{ t.ui.unityDemoLink }}</a>
+      </li>
+    </ul>
+  </div>
+</section>

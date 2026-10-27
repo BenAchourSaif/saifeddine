@@ -1,0 +1,17 @@
+@let t = c();
+<footer class="footer">
+  <div class="footer__inner page">
+    <div>
+      <p class="footer__brand">{{ site.candidateName }} — {{ t.hero.role }}</p>
+      <p class="footer__sub">{{ t.ui.footerSub }}</p>
+    </div>
+    <div class="footer__links">
+      <a routerLink="/projects">{{ t.ui.navProjects }}</a>
+      <a routerLink="/experience">{{ t.ui.navExperience }}</a>
+      <a routerLink="/about">{{ t.ui.navAbout }}</a>
+    </div>
+  </div>
+  <div class="footer__bottom page">
+    <span>© {{ year }}</span>
+  </div>
+</footer>

@@ -1,0 +1,5 @@
+.intro { max-width: 680px; }
+.project { display: flex; flex-direction: column; gap: 0.2rem; }
+.project__top { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.6rem; }
+.project ul { margin: 0 0 0.8rem; padding-inline-start: 1.2rem; color: var(--text-dim); }
+.chips { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 0 0 0.8rem; }

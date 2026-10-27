@@ -1,0 +1,51 @@
+@let t = c();
+<section class="section section--tight">
+  <div class="page">
+    <span class="eyebrow">{{ t.ui.projectsEyebrow }}</span>
+    <h1>{{ t.ui.projectsTitle }}</h1>
+    <p class="intro">{{ t.ui.projectsIntro }}</p>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="page grid-2">
+    @for (p of t.projects; track p.title) {
+      <article class="card project">
+        <div class="project__top">
+          <span class="badge">{{ p.kind }}</span>
+          <span class="badge">{{ p.period }}</span>
+          @if (p.confidential) {
+            <span class="badge badge--warn">{{ t.ui.confidential }}</span>
+          }
+        </div>
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.summary }}</p>
+        @if (p.title === 'SgharToon') {
+          <ul>
+            @for (r of t.sghartoon.projectRoles; track r) {
+              <li>{{ r }}</li>
+            }
+          </ul>
+        }
+        @if (p.stack) {
+          <p class="chips">
+            @for (s of p.stack; track s) {
+              <span class="badge badge--accent">{{ s }}</span>
+            }
+          </p>
+        }
+        @if (p.title === 'SgharToon') {
+          <a [href]="site.sghartoonUrl" target="_blank" rel="noopener">sghartoon.com ↗</a>
+        } @else if (p.route) {
+          <a [routerLink]="p.route">{{ p.linkLabel }}</a>
+        }
+      </article>
+    }
+  </div>
+</section>
+
+<section class="section">
+  <div class="page">
+    <a routerLink="/architecture">{{ t.ui.architectureLink }}</a>
+  </div>
+</section>

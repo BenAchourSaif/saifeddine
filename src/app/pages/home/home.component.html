@@ -1,0 +1,108 @@
+@let t = c();
+<section class="hero section">
+  <div class="page hero__inner">
+    <span class="eyebrow">{{ t.hero.role }} · {{ t.hero.location }}</span>
+    <h1>{{ site.candidateName }}</h1>
+    <p class="hero__lead">{{ t.hero.lead }}</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" routerLink="/projects">{{ t.ui.seeWork }}</a>
+      <a class="btn btn--ghost" routerLink="/experience">{{ t.ui.experience }}</a>
+      <a class="btn btn--ghost" routerLink="/about">{{ t.ui.contact }}</a>
+      <a class="btn btn--ghost" [href]="cvUrl()" download>{{ t.ui.downloadCv }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="page stats">
+    @for (s of t.stats; track s.label) {
+      <div class="stat">
+        <div class="stat__value">{{ s.value }}</div>
+        <div class="stat__label">{{ s.label }}</div>
+      </div>
+    }
+  </div>
+</section>
+
+<section class="section">
+  <div class="page">
+    <span class="eyebrow">{{ t.ui.mainProject }}</span>
+    <h2>SgharToon</h2>
+    <p class="lead">{{ t.sghartoon.tagline }}</p>
+    <p class="lead">{{ t.sghartoon.summary }}</p>
+    <div class="grid-3 highlights">
+      @for (p of t.sghartoon.products; track p.name) {
+        <div class="card">
+          <span class="badge badge--accent">{{ p.tech }}</span>
+          <h3>{{ p.name }}</h3>
+          <p>{{ p.body }}</p>
+        </div>
+      }
+    </div>
+    <div class="grid-2 highlights">
+      @for (h of t.sghartoon.highlights; track h.title) {
+        <div class="card">
+          <h3>{{ h.title }}</h3>
+          <p>{{ h.body }}</p>
+        </div>
+      }
+    </div>
+    <h3 class="shots-title">{{ t.ui.screenshotsTitle }}</h3>
+    <div class="shots">
+      @for (src of shots; track src; let i = $index) {
+        <figure class="shot" [class.shot--mobile]="i === shots.length - 1">
+          <img [src]="src" [alt]="t.sghartoon.shotCaptions[i]" loading="lazy" />
+          <figcaption>{{ t.sghartoon.shotCaptions[i] }}</figcaption>
+        </figure>
+      }
+    </div>
+    <p class="shots-note">{{ t.ui.screenshotsNote }}</p>
+    <p class="roles">
+      {{ t.ui.myRoles }}
+      @for (r of t.sghartoon.roles; track r) {
+        <span class="badge badge--indigo">{{ r }}</span>
+      }
+    </p>
+    <div class="hero__actions">
+      <a class="btn btn--ghost" [href]="site.sghartoonUrl" target="_blank" rel="noopener">{{ t.ui.visit }}</a>
+      @if (site.sghartoonDemoVideoUrl) {
+        <a class="btn btn--ghost" [href]="site.sghartoonDemoVideoUrl" target="_blank" rel="noopener">{{ t.ui.watchDemo }}</a>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="page">
+    <span class="eyebrow">{{ t.ui.stackEyebrow }}</span>
+    <h2>{{ t.ui.stackTitle }}</h2>
+    <div class="grid-2 highlights">
+      @for (g of t.skillGroups; track g.title) {
+        <div class="card">
+          <h3>{{ g.title }}</h3>
+          <p class="chips">
+            @for (i of g.items; track i) {
+              <span class="badge">{{ i }}</span>
+            }
+          </p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="page">
+    <span class="eyebrow">{{ t.ui.leadershipEyebrow }}</span>
+    <h2>{{ t.leadership.summary }}</h2>
+    <div class="grid-2 highlights">
+      @for (p of t.leadership.points; track p.label) {
+        <div class="card">
+          <div class="stat__value">{{ p.value }}</div>
+          <p>{{ p.label }}</p>
+        </div>
+      }
+    </div>
+    <a routerLink="/experience">{{ t.ui.seeExperience }}</a>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+@let t = i18n.c();
+<header class="nav">
+  <div class="nav__inner page">
+    <a class="nav__brand" routerLink="/" (click)="close()">
+      Saif Eddine Ben Achour
+    </a>
+
+    <button class="nav__toggle" type="button" (click)="toggle()" [attr.aria-label]="t.ui.menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav__links" [class.nav__links--open]="open">
+      <a routerLink="/projects" routerLinkActive="is-active" (click)="close()">{{ t.ui.navProjects }}</a>
+      <a routerLink="/experience" routerLinkActive="is-active" (click)="close()">{{ t.ui.navExperience }}</a>
+      <a routerLink="/about" routerLinkActive="is-active" (click)="close()">{{ t.ui.navAbout }}</a>
+      <div class="lang" role="group" aria-label="Language">
+        @for (l of langs; track l.code) {
+          <button type="button" class="lang__btn" [class.is-active]="i18n.lang() === l.code" (click)="i18n.set(l.code); close()">{{ l.label }}</button>
+        }
+      </div>
+    </nav>
+  </div>
+</header>

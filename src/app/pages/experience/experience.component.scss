@@ -1,0 +1,8 @@
+.timeline { display: flex; flex-direction: column; gap: 1.2rem; }
+.role__head { display: flex; justify-content: space-between; gap: 1rem; align-items: flex-start; flex-wrap: wrap; }
+.role__head h3 { margin: 0; }
+.role__org { color: var(--text); margin: 0.3rem 0 0.8rem; font-weight: 500; }
+.role ul { margin: 0 0 1rem; padding-inline-start: 1.2rem; color: var(--text-dim); }
+.role li { margin-bottom: 0.3rem; }
+.chips { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 0; }
+.certs { color: var(--text-dim); padding-inline-start: 1.2rem; }
