@@ -1,5 +1,5 @@
 import { Component, computed, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { LangService } from '../../core/i18n';
 import { SGHARTOON_SHOTS, SITE } from '../../core/site-config';
 import { VideoEmbedComponent } from '../../shared/video-embed/video-embed.component';
@@ -17,4 +17,16 @@ export class HomeComponent {
   i18n = inject(LangService);
   c = this.i18n.c;
   cvUrl = computed(() => SITE.cv[this.i18n.lang()]);
+  // '' = combined home page, 'unity' = Unity / XR portfolio, 'fullstack' = Full-Stack portfolio.
+  profile: '' | 'unity' | 'fullstack' = inject(ActivatedRoute).snapshot.data['profile'] ?? '';
+  view = computed(() => {
+    const t = this.c();
+    const p = this.profile ? t.profiles[this.profile] : null;
+    return {
+      role: p ? p.role : t.hero.role,
+      lead: p ? p.lead : t.hero.lead,
+      stats: p ? p.stats : t.stats,
+      skillGroups: p ? p.skillGroups : t.skillGroups,
+    };
+  });
 }

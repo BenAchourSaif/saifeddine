@@ -27,6 +27,10 @@ export interface Content {
     watchDemo: string;
     downloadCv: string;
     downloadCvXr: string;
+    navUnity: string;
+    navFullstack: string;
+    profileUnity: string;
+    profileFullstack: string;
     formTitle: string;
     formName: string;
     formEmail: string;
@@ -58,6 +62,7 @@ export interface Content {
   hero: { role: string; location: string; lead: string };
   xr: { eyebrow: string; title: string; lead: string; videoTitle: string; watch: string; items: { title: string; period: string; body: string }[] };
   stats: { value: string; label: string }[];
+  profiles: Record<'unity' | 'fullstack', { role: string; lead: string; stats: { value: string; label: string }[]; skillGroups: { title: string; items: string[] }[] }>;
   skillGroups: { title: string; items: string[] }[];
   sghartoon: {
     tagline: string;
@@ -115,6 +120,10 @@ const en: Content = {
     watchDemo: 'Watch the SgharToon demo ↗',
     downloadCv: 'CV – Full-Stack (PDF) ↓',
     downloadCvXr: 'CV – Unity / XR (PDF) ↓',
+    navUnity: 'Unity / XR',
+    navFullstack: 'Full-Stack',
+    profileUnity: 'Unity / XR portfolio →',
+    profileFullstack: 'Full-Stack portfolio →',
     formTitle: 'Send a message',
     formName: 'Your name',
     formEmail: 'Your email',
@@ -160,6 +169,40 @@ const en: Content = {
       { title: 'AR applications with Vuforia', period: 'Engineering degree', body: 'Several augmented reality projects built in Unity during the Digital Imaging & Virtual Reality degree.' },
       { title: 'Virtual visit for a digital fair', period: '2022', body: 'Interactive 3D visit experience, built as the sole Unity developer in a team of three.' },
     ],
+  },
+  profiles: {
+    unity: {
+      role: 'Senior Unity Developer · Tech Lead · AR / VR · Games',
+      lead: '8+ years shipping games and real-time 3D on iOS, Android and WebGL: 170+ games at SgharToon, mobile AR since 2017 (Orange Summer Challenge laureate), multiplayer, and stable 60 FPS on low-end devices. Engineer in Digital Imaging & Virtual Reality.',
+      stats: [
+        { value: '170+', label: 'games shipped' },
+        { value: '2017', label: 'mobile AR, Orange Summer Challenge laureate' },
+        { value: '60 FPS', label: 'on low-end Android tablets' },
+        { value: '8+ yrs', label: 'Unity & C# in production' },
+      ],
+      skillGroups: [
+        { title: 'Unity & gameplay', items: ['Unity (C#)', 'Gameplay systems', 'ScriptableObjects', 'UGUI', 'Input System', 'URP', 'Shaders', 'Addressables', 'Custom editor tools'] },
+        { title: 'AR / VR & 3D', items: ['AR Foundation', 'Vuforia', 'OpenXR', 'XR Interaction Toolkit', 'Meta Quest', 'Image tracking', 'Real-time 3D'] },
+        { title: 'Performance & networking', items: ['Unity Profiler', 'Memory Profiler', 'GC optimisation', 'Object pooling', 'Job System', 'Socket.IO', 'Server-authoritative multiplayer'] },
+        { title: 'Platforms & delivery', items: ['iOS', 'Android', 'WebGL', 'Android plugins (Java / Kotlin)', 'Firebase', 'CI/CD', 'Team lead'] },
+      ],
+    },
+    fullstack: {
+      role: 'Senior Full-Stack Tech Lead · .NET · Angular · React',
+      lead: '8+ years designing and leading the delivery of web platforms: .NET / C# back-ends, Angular and React front-ends, real-time features and CI/CD. Tech lead of SgharToon (2,400+ users, 99.7% uptime) and freelance consultant for a bank, a retailer and start-ups.',
+      stats: [
+        { value: '8+ yrs', label: 'C# / .NET in production' },
+        { value: '99.7%', label: 'measured uptime' },
+        { value: '~10', label: 'developers led over the years' },
+        { value: '6 weeks', label: 'retail management app built alone' },
+      ],
+      skillGroups: [
+        { title: 'Back end', items: ['C# / .NET', 'ASP.NET Core', 'REST APIs', 'Node.js', 'PostgreSQL', 'SQL / NoSQL', 'Firebase'] },
+        { title: 'Front end', items: ['Angular', 'React', 'TypeScript', 'JavaScript', 'Real-time dashboards'] },
+        { title: 'Architecture & quality', items: ['Async services (retry, timeout, fallback)', 'Socket.IO', 'Clean code', 'Code review', 'Testing', 'Profiling'] },
+        { title: 'Leadership & delivery', items: ['Tech lead', 'Team lead', 'Agile / Scrum', 'CI/CD', 'Docker', 'JIRA / ClickUp'] },
+      ],
+    },
   },
   stats: [
     { value: '8+ yrs', label: 'Unity & C# / .NET' },
@@ -410,6 +453,10 @@ const fr: Content = {
     watchDemo: 'Voir la démo SgharToon ↗',
     downloadCv: 'CV – Full Stack (PDF) ↓',
     downloadCvXr: 'CV – Unity / XR (PDF) ↓',
+    navUnity: 'Unity / XR',
+    navFullstack: 'Full Stack',
+    profileUnity: 'Portfolio Unity / XR →',
+    profileFullstack: 'Portfolio Full Stack →',
     formTitle: 'Envoyer un message',
     formName: 'Votre nom',
     formEmail: 'Votre email',
@@ -455,6 +502,40 @@ const fr: Content = {
       { title: 'Applications AR avec Vuforia', period: 'Cycle ingénieur', body: 'Plusieurs projets de réalité augmentée sous Unity pendant le diplôme en imagerie numérique et réalité virtuelle.' },
       { title: 'Visite virtuelle pour une foire numérique', period: '2022', body: 'Expérience de visite 3D interactive, réalisée comme seul développeur Unity dans une équipe de trois.' },
     ],
+  },
+  profiles: {
+    unity: {
+      role: 'Développeur Unity senior · Tech Lead · AR / VR · Jeux',
+      lead: 'Plus de 8 ans à livrer des jeux et de la 3D temps réel sur iOS, Android et WebGL : plus de 170 jeux chez SgharToon, de l’AR mobile depuis 2017 (lauréat de l’Orange Summer Challenge), du multijoueur et 60 FPS stables sur matériel d’entrée de gamme. Ingénieur en imagerie numérique et réalité virtuelle.',
+      stats: [
+        { value: '170+', label: 'jeux livrés' },
+        { value: '2017', label: 'AR mobile, lauréat Orange Summer Challenge' },
+        { value: '60 FPS', label: 'sur tablettes Android d’entrée de gamme' },
+        { value: '8+ ans', label: 'de Unity & C# en production' },
+      ],
+      skillGroups: [
+        { title: 'Unity & gameplay', items: ['Unity (C#)', 'Systèmes de gameplay', 'ScriptableObjects', 'UGUI', 'Input System', 'URP', 'Shaders', 'Addressables', 'Outils d’éditeur'] },
+        { title: 'AR / VR & 3D', items: ['AR Foundation', 'Vuforia', 'OpenXR', 'XR Interaction Toolkit', 'Meta Quest', 'Suivi d’image', '3D temps réel'] },
+        { title: 'Performance & réseau', items: ['Unity Profiler', 'Memory Profiler', 'Optimisation GC', 'Object pooling', 'Job System', 'Socket.IO', 'Multijoueur server-authoritative'] },
+        { title: 'Plateformes & livraison', items: ['iOS', 'Android', 'WebGL', 'Plugins Android (Java / Kotlin)', 'Firebase', 'CI/CD', 'Team lead'] },
+      ],
+    },
+    fullstack: {
+      role: 'Tech Lead Full Stack senior · .NET · Angular · React',
+      lead: 'Plus de 8 ans à concevoir des plateformes web et à piloter leur livraison : back-ends .NET / C#, front-ends Angular et React, temps réel et CI/CD. Tech lead de SgharToon (2 400+ utilisateurs, 99,7 % de disponibilité) et consultant freelance pour une banque, un acteur du retail et des startups.',
+      stats: [
+        { value: '8+ ans', label: 'de C# / .NET en production' },
+        { value: '99,7 %', label: 'de disponibilité mesurée' },
+        { value: '~10', label: 'développeurs encadrés au fil des années' },
+        { value: '6 semaines', label: 'pour une app de gestion retail réalisée seul' },
+      ],
+      skillGroups: [
+        { title: 'Back end', items: ['C# / .NET', 'ASP.NET Core', 'API REST', 'Node.js', 'PostgreSQL', 'SQL / NoSQL', 'Firebase'] },
+        { title: 'Front end', items: ['Angular', 'React', 'TypeScript', 'JavaScript', 'Tableaux de bord temps réel'] },
+        { title: 'Architecture & qualité', items: ['Services asynchrones (reprise, délai, repli)', 'Socket.IO', 'Clean code', 'Revue de code', 'Tests', 'Profilage'] },
+        { title: 'Leadership & livraison', items: ['Tech lead', 'Team lead', 'Agile / Scrum', 'CI/CD', 'Docker', 'JIRA / ClickUp'] },
+      ],
+    },
   },
   stats: [
     { value: '8+ ans', label: 'Unity & C# / .NET' },
@@ -705,6 +786,10 @@ const ar: Content = {
     watchDemo: 'شاهد عرض SgharToon ↗',
     downloadCv: 'السيرة الذاتية – Full Stack (PDF) ↓',
     downloadCvXr: 'السيرة الذاتية – Unity / XR (PDF) ↓',
+    navUnity: 'Unity / XR',
+    navFullstack: 'Full Stack',
+    profileUnity: 'ملف Unity / XR ←',
+    profileFullstack: 'ملف Full Stack ←',
     formTitle: 'أرسل رسالة',
     formName: 'اسمك',
     formEmail: 'بريدك الإلكتروني',
@@ -750,6 +835,40 @@ const ar: Content = {
       { title: 'تطبيقات واقع معزّز بـ Vuforia', period: 'دراسة الهندسة', body: 'عدة مشاريع واقع معزّز بـ Unity خلال دبلوم التصوير الرقمي والواقع الافتراضي.' },
       { title: 'جولة افتراضية لمعرض رقمي', period: '2022', body: 'تجربة زيارة ثلاثية الأبعاد تفاعلية، بصفتي مطوّر Unity الوحيد في فريق من ثلاثة.' },
     ],
+  },
+  profiles: {
+    unity: {
+      role: 'مطوّر Unity أول · قائد تقني · واقع معزّز وافتراضي · ألعاب',
+      lead: 'أكثر من 8 سنوات في نشر الألعاب والرسوم ثلاثية الأبعاد في الوقت الحقيقي على iOS وAndroid وWebGL: أكثر من 170 لعبة في SgharToon، وواقع معزّز على الموبايل منذ 2017 (فائز في Orange Summer Challenge)، ولعب جماعي، و60 إطاراً في الثانية على الأجهزة المنخفضة. مهندس في التصوير الرقمي والواقع الافتراضي.',
+      stats: [
+        { value: '170+', label: 'لعبة منشورة' },
+        { value: '2017', label: 'واقع معزّز، فائز Orange Summer Challenge' },
+        { value: '60 FPS', label: 'على أجهزة Android المنخفضة' },
+        { value: '+8 سنوات', label: 'Unity وC# في الإنتاج' },
+      ],
+      skillGroups: [
+        { title: 'Unity وأنظمة اللعب', items: ['Unity (C#)', 'Gameplay systems', 'ScriptableObjects', 'UGUI', 'Input System', 'URP', 'Shaders', 'Addressables', 'Editor tools'] },
+        { title: 'الواقع المعزّز والافتراضي و3D', items: ['AR Foundation', 'Vuforia', 'OpenXR', 'XR Interaction Toolkit', 'Meta Quest', 'Image tracking', '3D في الوقت الحقيقي'] },
+        { title: 'الأداء والشبكات', items: ['Unity Profiler', 'Memory Profiler', 'GC', 'Object pooling', 'Job System', 'Socket.IO', 'Multiplayer'] },
+        { title: 'المنصات والتسليم', items: ['iOS', 'Android', 'WebGL', 'Android plugins (Java / Kotlin)', 'Firebase', 'CI/CD', 'قيادة فريق'] },
+      ],
+    },
+    fullstack: {
+      role: 'قائد تقني أول Full Stack · .NET · Angular · React',
+      lead: 'أكثر من 8 سنوات في تصميم منصات الويب وقيادة تسليمها: خلفيات .NET / C#، وواجهات Angular وReact، وميزات فورية وCI/CD. قائد تقني لـ SgharToon (أكثر من 2,400 مستخدم، توفّر 99.7%) ومستشار مستقل لبنك وشركة تجزئة وشركات ناشئة.',
+      stats: [
+        { value: '+8 سنوات', label: 'C# / .NET في الإنتاج' },
+        { value: '99.7%', label: 'وقت تشغيل مقاس' },
+        { value: '~10', label: 'مطوّرين تحت قيادتي على مرّ السنوات' },
+        { value: '6 أسابيع', label: 'لتطبيق إدارة تجزئة نفّذته وحدي' },
+      ],
+      skillGroups: [
+        { title: 'الخلفية', items: ['C# / .NET', 'ASP.NET Core', 'REST APIs', 'Node.js', 'PostgreSQL', 'SQL / NoSQL', 'Firebase'] },
+        { title: 'الواجهة الأمامية', items: ['Angular', 'React', 'TypeScript', 'JavaScript', 'لوحات تحكم فورية'] },
+        { title: 'المعمارية والجودة', items: ['خدمات غير متزامنة', 'Socket.IO', 'Clean code', 'مراجعة الكود', 'الاختبارات', 'Profiling'] },
+        { title: 'القيادة والتسليم', items: ['قيادة تقنية', 'قيادة فريق', 'Agile / Scrum', 'CI/CD', 'Docker', 'JIRA / ClickUp'] },
+      ],
+    },
   },
   stats: [
     { value: '+8 سنوات', label: 'Unity وC# / .NET' },

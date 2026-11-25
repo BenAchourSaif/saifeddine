@@ -6,6 +6,16 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/home/home.component').then((m) => m.HomeComponent),
   },
   {
+    path: 'unity',
+    loadComponent: () => import('./pages/home/home.component').then((m) => m.HomeComponent),
+    data: { profile: 'unity' },
+  },
+  {
+    path: 'fullstack',
+    loadComponent: () => import('./pages/home/home.component').then((m) => m.HomeComponent),
+    data: { profile: 'fullstack' },
+  },
+  {
     path: 'projects',
     loadComponent: () => import('./pages/projects/projects.component').then((m) => m.ProjectsComponent),
   },

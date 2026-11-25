@@ -1,22 +1,32 @@
 @let t = c();
+@let v = view();
 <section class="hero section">
   <div class="page hero__inner">
-    <span class="eyebrow">{{ t.hero.role }} · {{ t.hero.location }}</span>
+    <span class="eyebrow">{{ v.role }} · {{ t.hero.location }}</span>
     <h1>{{ site.candidateName }}</h1>
-    <p class="hero__lead">{{ t.hero.lead }}</p>
+    <p class="hero__lead">{{ v.lead }}</p>
     <div class="hero__actions">
-      <a class="btn btn--primary" routerLink="/projects">{{ t.ui.seeWork }}</a>
+      @if (!profile) {
+        <a class="btn btn--primary" routerLink="/unity">{{ t.ui.profileUnity }}</a>
+        <a class="btn btn--primary" routerLink="/fullstack">{{ t.ui.profileFullstack }}</a>
+      } @else {
+        <a class="btn btn--primary" routerLink="/projects">{{ t.ui.seeWork }}</a>
+      }
       <a class="btn btn--ghost" routerLink="/experience">{{ t.ui.experience }}</a>
       <a class="btn btn--ghost" routerLink="/about">{{ t.ui.contact }}</a>
-      <a class="btn btn--ghost" [href]="site.cvXr" download>{{ t.ui.downloadCvXr }}</a>
-      <a class="btn btn--ghost" [href]="cvUrl()" download>{{ t.ui.downloadCv }}</a>
+      @if (profile !== 'fullstack') {
+        <a class="btn btn--ghost" [href]="site.cvXr" download>{{ t.ui.downloadCvXr }}</a>
+      }
+      @if (profile !== 'unity') {
+        <a class="btn btn--ghost" [href]="cvUrl()" download>{{ t.ui.downloadCv }}</a>
+      }
     </div>
   </div>
 </section>
 
 <section class="section section--tight">
   <div class="page stats">
-    @for (s of t.stats; track s.label) {
+    @for (s of v.stats; track s.label) {
       <div class="stat">
         <div class="stat__value">{{ s.value }}</div>
         <div class="stat__label">{{ s.label }}</div>
@@ -74,6 +84,7 @@
   </div>
 </section>
 
+@if (profile !== 'fullstack') {
 <section class="section">
   <div class="page">
     <span class="eyebrow">{{ t.xr.eyebrow }}</span>
@@ -96,13 +107,14 @@
     </div>
   </div>
 </section>
+}
 
 <section class="section">
   <div class="page">
     <span class="eyebrow">{{ t.ui.stackEyebrow }}</span>
     <h2>{{ t.ui.stackTitle }}</h2>
     <div class="grid-2 highlights">
-      @for (g of t.skillGroups; track g.title) {
+      @for (g of v.skillGroups; track g.title) {
         <div class="card">
           <h3>{{ g.title }}</h3>
           <p class="chips">
