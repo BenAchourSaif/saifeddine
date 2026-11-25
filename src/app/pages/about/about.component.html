@@ -29,7 +29,9 @@
         @if (site.phone) { <a [href]="'tel:' + site.phone.replaceAll(' ', '')" dir="ltr">{{ site.phone }}</a> }
         @if (site.linkedinUrl) { <a [href]="site.linkedinUrl" target="_blank" rel="noopener">LinkedIn ↗</a> }
         @if (site.githubUrl) { <a [href]="site.githubUrl" target="_blank" rel="noopener">GitHub ↗</a> }
+        @if (site.whatsappUrl) { <a [href]="site.whatsappUrl" target="_blank" rel="noopener">WhatsApp ↗</a> }
       </div>
+      <a class="btn btn--primary" [href]="site.cvXr" download>{{ t.ui.downloadCvXr }}</a>
       <a class="btn btn--primary" [href]="cvUrl()" download>{{ t.ui.downloadCv }}</a>
     </div>
 

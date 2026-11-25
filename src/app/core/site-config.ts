@@ -14,13 +14,20 @@ export const SITE = {
   repoContentDiscoveryUrl: null as string | null,
   sghartoonUrl: 'https://sghartoon.com',
   linkedinUrl: 'https://www.linkedin.com/in/saif-eddine-ben-achour/' as string | null,
-  githubUrl: null as string | null,
+  githubUrl: 'https://github.com/BenAchourSaif' as string | null,
+  whatsappUrl: 'https://wa.me/21650989000' as string | null,
   email: 'saifeddine.benachour@gmail.com' as string | null,
   phone: '+216 50 989 000' as string | null,
   sghartoonDemoVideoUrl: 'https://youtu.be/kp5x0duiZLI' as string | null,
+  // SgharToon V1 (2017): AR colouring and 3D stories — Orange Summer Challenge laureate.
+  arDemoEmbedUrl: 'https://www.youtube.com/embed/VJaWkXp13bQ',
+  arDemoWatchUrl: 'https://youtu.be/VJaWkXp13bQ',
+  appStoreUrl: 'https://apps.apple.com/app/id1625583473',
   // General CV, one PDF per language (Arabic readers get the English one).
   // Web3Forms public access key (same one the previous portfolio used); it only delivers to the email below.
   web3formsKey: '605194e3-c8e7-4ab8-ba5f-5a786c4723b2',
+  // Unity / AR / VR CV (English) — tailored for game studios and XR roles.
+  cvXr: 'cv/Saif_Eddine_Ben_Achour_CV_Unity_XR_EN.pdf',
   cv: { en: 'cv/Saif_Eddine_Ben_Achour_CV_EN.pdf', fr: 'cv/Saif_Eddine_Ben_Achour_CV_FR.pdf', ar: 'cv/Saif_Eddine_Ben_Achour_CV_EN.pdf' },
 };
 

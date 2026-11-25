@@ -26,6 +26,7 @@ export interface Content {
     confidential: string;
     watchDemo: string;
     downloadCv: string;
+    downloadCvXr: string;
     formTitle: string;
     formName: string;
     formEmail: string;
@@ -55,6 +56,7 @@ export interface Content {
     demosNote: string;
   };
   hero: { role: string; location: string; lead: string };
+  xr: { eyebrow: string; title: string; lead: string; videoTitle: string; watch: string; items: { title: string; period: string; body: string }[] };
   stats: { value: string; label: string }[];
   skillGroups: { title: string; items: string[] }[];
   sghartoon: {
@@ -79,6 +81,7 @@ export interface Content {
     stack?: string[];
     confidential?: boolean;
     route?: string;
+    href?: string;
     linkLabel?: string;
   }[];
   agile: { title: string; body: string }[];
@@ -87,7 +90,7 @@ export interface Content {
 }
 
 const en: Content = {
-  meta: { title: 'Saif Eddine Ben Achour — Full Stack Developer · Tech Lead' },
+  meta: { title: 'Saif Eddine Ben Achour — Senior Tech Lead · Unity & XR · Full-Stack .NET, Angular, React' },
   ui: {
     menu: 'Menu',
     navProjects: 'Projects',
@@ -110,7 +113,8 @@ const en: Content = {
     architectureLink: 'Read the architecture notes for the Unity demos →',
     confidential: 'confidential',
     watchDemo: 'Watch the SgharToon demo ↗',
-    downloadCv: 'Download CV (PDF) ↓',
+    downloadCv: 'CV – Full-Stack (PDF) ↓',
+    downloadCvXr: 'CV – Unity / XR (PDF) ↓',
     formTitle: 'Send a message',
     formName: 'Your name',
     formEmail: 'Your email',
@@ -136,24 +140,38 @@ const en: Content = {
     notPushed: 'not yet pushed to GitHub',
     emailLabel: 'Email',
     phoneLabel: 'Phone',
-    footerSub: 'Angular · React · .NET / C# · Unity — Tunis, Tunisia.',
+    footerSub: 'Unity · AR / VR · .NET / C# · Angular · React — Tunis, Tunisia · open to relocation (GCC & Europe).',
     demosNote: 'This page is available in English only.',
   },
   hero: {
-    role: 'Full Stack Developer · Tech Lead',
-    location: 'Tunis, Tunisia',
-    lead: '8 years building and leading the delivery of web and mobile products with Angular, React, .NET / C# and Unity. Team lead and tech lead.',
+    role: 'Senior Tech Lead · Unity & XR · Full-Stack .NET / Angular / React',
+    location: 'Tunis, Tunisia · open to relocation',
+    lead: '8+ years building games, AR/VR experiences and the web platforms behind them, from architecture to production. 170+ games shipped, mobile AR since 2017, and full-stack delivery with .NET, Angular and React.',
+  },
+  xr: {
+    eyebrow: 'AR & VR',
+    title: 'Augmented and virtual reality since 2017',
+    lead: 'SgharToon started as an augmented reality product: children colour a classic paper page, then point the mobile app at it to see a 3D model come to life with their own colours. This first MVP won the Orange Summer Challenge 2017 (Orange Tunisia), years before generative-AI tools.',
+    videoTitle: 'SgharToon V1 (2017): AR colouring and 3D stories',
+    watch: 'Watch on YouTube ↗',
+    items: [
+      { title: 'AR colouring app — SgharToon V1', period: '2017', body: 'Image tracking of the printed page, capture of the child’s colouring and real-time mapping onto the 3D model. Laureate of the Orange Summer Challenge, with a cash prize.' },
+      { title: 'VR kickboxing training game', period: 'Engineering degree', body: 'Martial-arts combat training experience in virtual reality, built in Unity.' },
+      { title: 'AR applications with Vuforia', period: 'Engineering degree', body: 'Several augmented reality projects built in Unity during the Digital Imaging & Virtual Reality degree.' },
+      { title: 'Virtual visit for a digital fair', period: '2022', body: 'Interactive 3D visit experience, built as the sole Unity developer in a team of three.' },
+    ],
   },
   stats: [
-    { value: '8 yrs', label: 'of C# / .NET' },
+    { value: '8+ yrs', label: 'Unity & C# / .NET' },
+    { value: '170+', label: 'games shipped' },
     { value: '2,400+', label: 'SgharToon users' },
-    { value: '170+', label: 'modules shipped' },
-    { value: '99.7%', label: 'measured uptime' },
+    { value: '2017', label: 'Orange Summer Challenge laureate (AR)' },
   ],
   skillGroups: [
     { title: 'Front end', items: ['Angular', 'React', 'TypeScript'] },
     { title: 'Back end', items: ['C# / .NET', 'REST APIs', 'Node.js', 'PostgreSQL'] },
-    { title: 'Unity & mobile', items: ['Unity (C#)', 'WebGL', 'Android (Java)', 'Socket.IO'] },
+    { title: 'Unity & mobile', items: ['Unity (C#)', 'WebGL', 'iOS & Android', 'Android (Java / Kotlin)', 'Socket.IO', 'Addressables', 'URP'] },
+    { title: 'AR / VR & 3D', items: ['AR Foundation', 'Vuforia', 'OpenXR', 'XR Interaction Toolkit', 'Meta Quest', 'Real-time 3D'] },
     {
       title: 'Leadership & method',
       items: ['Team lead', 'Tech lead', 'Agile', 'Code review', 'CI/CD', 'Docker', 'JIRA / ClickUp'],
@@ -181,7 +199,7 @@ const en: Content = {
   },
   bio: {
     paragraphs: [
-      'Full stack developer and tech lead with 8 years of experience, based in Tunis. I build and lead the delivery of web and mobile products across Angular, React, .NET / C# and Unity.',
+      'Senior tech lead with 8+ years of experience, based in Tunis and open to relocation. I lead Unity game and AR/VR development as well as full-stack web delivery with .NET, Angular and React. Engineer in Digital Imaging & Virtual Reality.',
       'I was tech lead and co-founder of SgharToon, a platform used in production by more than 2,400 people, and I now work as a freelance consultant on management and reporting tools. Alongside delivery, I mentor developers and have taught computer science students.',
     ],
     facts: [
@@ -201,7 +219,7 @@ const en: Content = {
     {
       title: 'Freelance consultant & developer',
       org: 'Tunis',
-      period: 'Jan 2026 – present',
+      period: 'Dec 2025 – present',
       points: [
         'Management tool and Value Stream Mapping (VSM) dashboard for a bank — confidential client, React and .NET Core.',
         'Retail Flow (May – Jun 2026): industrial retail management prototype designed and built alone in six weeks.',
@@ -214,6 +232,7 @@ const en: Content = {
       org: 'SgharToon',
       period: 'Oct 2017 – Dec 2025',
       points: [
+        'First MVP in 2017: a mobile augmented reality colouring app, laureate of the Orange Summer Challenge (Orange Tunisia).',
         'Led a team of developers: task distribution, code reviews, mentoring. About ten people joined over the years.',
         'Technical direction since the start (roadmap, prioritisation) and a data-driven architecture: 170+ modules driven by remote JSON content.',
         'Server-authoritative networking with state-snapshot recovery, and a memory pipeline holding 60fps on low-end Android.',
@@ -271,6 +290,15 @@ const en: Content = {
     { title: 'Bachelor’s in Multimedia Computer Science, ISAMM', period: '2012 – 2015' },
   ],
   projects: [
+    {
+      title: 'AR colouring app — SgharToon V1',
+      period: '2017',
+      kind: 'Mobile AR · Unity',
+      summary: 'Children colour a paper page, then see the 3D model come to life in AR with their own colours. Laureate of the Orange Summer Challenge 2017.',
+      stack: ['Unity', 'C#', 'AR', 'Image tracking'],
+      href: 'https://youtu.be/VJaWkXp13bQ',
+      linkLabel: 'Watch the demo ↗',
+    },
     {
       title: 'SgharToon',
       period: '2017 – 2025',
@@ -348,6 +376,7 @@ const en: Content = {
   ],
   teaching: 'Lecturer at ISAMM (2022 – 2024): C#, Java, native Android and software architecture, supervising about 20 students. Unity 2D trainer at WeCode Land (2022 – 2023).',
   recognition: [
+    { title: 'Orange Summer Challenge', org: 'Laureate with cash prize — AR colouring MVP', year: '2017' },
     { title: 'Google for Startups', org: 'Tunisia accelerator programme', year: '2022' },
     { title: 'Westerwelle Foundation', org: 'Berlin Young Founders fellowship', year: '2024' },
     { title: 'LEAP Riyadh', org: 'Selected exhibitor', year: '2025' },
@@ -356,7 +385,7 @@ const en: Content = {
 };
 
 const fr: Content = {
-  meta: { title: 'Saif Eddine Ben Achour — Développeur Full Stack · Tech Lead' },
+  meta: { title: 'Saif Eddine Ben Achour — Tech Lead senior · Unity & XR · Full Stack .NET, Angular, React' },
   ui: {
     menu: 'Menu',
     navProjects: 'Projets',
@@ -379,7 +408,8 @@ const fr: Content = {
     architectureLink: 'Lire les notes d’architecture des démos Unity →',
     confidential: 'confidentiel',
     watchDemo: 'Voir la démo SgharToon ↗',
-    downloadCv: 'Télécharger le CV (PDF) ↓',
+    downloadCv: 'CV – Full Stack (PDF) ↓',
+    downloadCvXr: 'CV – Unity / XR (PDF) ↓',
     formTitle: 'Envoyer un message',
     formName: 'Votre nom',
     formEmail: 'Votre email',
@@ -405,24 +435,38 @@ const fr: Content = {
     notPushed: 'pas encore publié sur GitHub',
     emailLabel: 'Email',
     phoneLabel: 'Téléphone',
-    footerSub: 'Angular · React · .NET / C# · Unity — Tunis, Tunisie.',
+    footerSub: 'Unity · AR / VR · .NET / C# · Angular · React — Tunis, Tunisie · ouvert à la relocalisation (Golfe & Europe).',
     demosNote: 'Cette page est disponible en anglais uniquement.',
   },
   hero: {
-    role: 'Développeur Full Stack · Tech Lead',
-    location: 'Tunis, Tunisie',
-    lead: '8 ans à concevoir des produits web et mobile et à piloter leur livraison avec Angular, React, .NET / C# et Unity. Team lead et tech lead.',
+    role: 'Tech Lead senior · Unity & XR · Full Stack .NET / Angular / React',
+    location: 'Tunis, Tunisie · ouvert à la relocalisation',
+    lead: 'Plus de 8 ans à créer des jeux, des expériences AR/VR et les plateformes web qui les portent, de l’architecture à la production. Plus de 170 jeux livrés, de l’AR mobile depuis 2017, et une livraison full stack en .NET, Angular et React.',
+  },
+  xr: {
+    eyebrow: 'AR & VR',
+    title: 'Réalité augmentée et virtuelle depuis 2017',
+    lead: 'SgharToon a commencé comme un produit de réalité augmentée : l’enfant colorie une page papier classique, puis la vise avec l’application mobile pour voir un modèle 3D prendre vie avec ses propres couleurs. Ce premier MVP a été lauréat de l’Orange Summer Challenge 2017 (Orange Tunisie), bien avant les outils d’IA générative.',
+    videoTitle: 'SgharToon V1 (2017) : coloriage AR et histoires 3D',
+    watch: 'Voir sur YouTube ↗',
+    items: [
+      { title: 'Application de coloriage AR — SgharToon V1', period: '2017', body: 'Suivi d’image de la page imprimée, capture du coloriage de l’enfant et application en temps réel sur le modèle 3D. Lauréat de l’Orange Summer Challenge, avec un prix financier.' },
+      { title: 'Jeu d’entraînement au kickboxing en VR', period: 'Cycle ingénieur', body: 'Expérience d’entraînement au combat d’arts martiaux en réalité virtuelle, développée sous Unity.' },
+      { title: 'Applications AR avec Vuforia', period: 'Cycle ingénieur', body: 'Plusieurs projets de réalité augmentée sous Unity pendant le diplôme en imagerie numérique et réalité virtuelle.' },
+      { title: 'Visite virtuelle pour une foire numérique', period: '2022', body: 'Expérience de visite 3D interactive, réalisée comme seul développeur Unity dans une équipe de trois.' },
+    ],
   },
   stats: [
-    { value: '8 ans', label: 'de C# / .NET' },
+    { value: '8+ ans', label: 'Unity & C# / .NET' },
+    { value: '170+', label: 'jeux livrés' },
     { value: '2 400+', label: 'utilisateurs SgharToon' },
-    { value: '170+', label: 'modules livrés' },
-    { value: '99,7 %', label: 'de disponibilité mesurée' },
+    { value: '2017', label: 'lauréat Orange Summer Challenge (AR)' },
   ],
   skillGroups: [
     { title: 'Front end', items: ['Angular', 'React', 'TypeScript'] },
     { title: 'Back end', items: ['C# / .NET', 'API REST', 'Node.js', 'PostgreSQL'] },
-    { title: 'Unity & mobile', items: ['Unity (C#)', 'WebGL', 'Android (Java)', 'Socket.IO'] },
+    { title: 'Unity & mobile', items: ['Unity (C#)', 'WebGL', 'iOS & Android', 'Android (Java / Kotlin)', 'Socket.IO', 'Addressables', 'URP'] },
+    { title: 'AR / VR & 3D', items: ['AR Foundation', 'Vuforia', 'OpenXR', 'XR Interaction Toolkit', 'Meta Quest', '3D temps réel'] },
     {
       title: 'Leadership & méthode',
       items: ['Team lead', 'Tech lead', 'Agile', 'Revues de code', 'CI/CD', 'Docker', 'JIRA / ClickUp'],
@@ -450,7 +494,7 @@ const fr: Content = {
   },
   bio: {
     paragraphs: [
-      'Développeur full stack et tech lead avec 8 ans d’expérience, basé à Tunis. Je conçois des produits web et mobile et pilote leur livraison avec Angular, React, .NET / C# et Unity.',
+      'Tech lead senior avec plus de 8 ans d’expérience, basé à Tunis et ouvert à la relocalisation. Je pilote le développement de jeux et d’expériences AR/VR sous Unity, ainsi que la livraison web full stack en .NET, Angular et React. Ingénieur en imagerie numérique et réalité virtuelle.',
       'J’ai été tech lead et co-fondateur de SgharToon, une plateforme utilisée en production par plus de 2 400 personnes, et je travaille aujourd’hui comme consultant freelance sur des outils de gestion et de reporting. En parallèle de la livraison, j’accompagne des développeurs et j’ai enseigné à des étudiants en informatique.',
     ],
     facts: [
@@ -470,7 +514,7 @@ const fr: Content = {
     {
       title: 'Consultant et développeur freelance',
       org: 'Tunis',
-      period: 'Janv. 2026 – présent',
+      period: 'Déc. 2025 – présent',
       points: [
         'Outil de gestion et tableau de bord Value Stream Mapping (VSM) pour une banque — client confidentiel, React et .NET Core.',
         'Retail Flow (mai – juin 2026) : prototype de gestion pour le retail industriel, conçu et réalisé seul en six semaines.',
@@ -483,6 +527,7 @@ const fr: Content = {
       org: 'SgharToon',
       period: 'Oct. 2017 – déc. 2025',
       points: [
+        'Premier MVP en 2017 : une application mobile de coloriage en réalité augmentée, lauréate de l’Orange Summer Challenge (Orange Tunisie).',
         'Encadrement d’une équipe de développeurs : répartition des tâches, revues de code, mentorat. Une dizaine de profils intégrés au fil des années.',
         'Direction technique depuis la création (roadmap, priorisation) et architecture orientée données : plus de 170 modules pilotés par du contenu JSON distant.',
         'Réseau server-authoritative avec reprise par snapshot, et pipeline mémoire tenant 60 fps sur Android d’entrée de gamme.',
@@ -540,6 +585,15 @@ const fr: Content = {
     { title: 'Licence en informatique multimédia, ISAMM', period: '2012 – 2015' },
   ],
   projects: [
+    {
+      title: 'Coloriage AR — SgharToon V1',
+      period: '2017',
+      kind: 'AR mobile · Unity',
+      summary: 'L’enfant colorie une page papier, puis voit le modèle 3D prendre vie en AR avec ses propres couleurs. Lauréat de l’Orange Summer Challenge 2017.',
+      stack: ['Unity', 'C#', 'AR', 'Suivi d’image'],
+      href: 'https://youtu.be/VJaWkXp13bQ',
+      linkLabel: 'Voir la démo ↗',
+    },
     {
       title: 'SgharToon',
       period: '2017 – 2025',
@@ -617,6 +671,7 @@ const fr: Content = {
   ],
   teaching: 'Enseignant à l’ISAMM (2022 – 2024) : C#, Java, Android natif et architecture logicielle, avec environ 20 étudiants encadrés. Formateur Unity 2D chez WeCode Land (2022 – 2023).',
   recognition: [
+    { title: 'Orange Summer Challenge', org: 'Lauréat avec prix financier — MVP de coloriage AR', year: '2017' },
     { title: 'Google for Startups', org: 'Programme d’accélération Tunisie', year: '2022' },
     { title: 'Westerwelle Foundation', org: 'Bourse Berlin Young Founders', year: '2024' },
     { title: 'LEAP Riyadh', org: 'Exposant sélectionné', year: '2025' },
@@ -625,7 +680,7 @@ const fr: Content = {
 };
 
 const ar: Content = {
-  meta: { title: 'سيف الدين بن عاشور — مطوّر Full Stack · قائد تقني' },
+  meta: { title: 'سيف الدين بن عاشور — قائد تقني أول · Unity والواقع الممتد · Full Stack .NET وAngular وReact' },
   ui: {
     menu: 'القائمة',
     navProjects: 'المشاريع',
@@ -648,7 +703,8 @@ const ar: Content = {
     architectureLink: 'اقرأ ملاحظات المعمارية لعروض Unity ←',
     confidential: 'سرّي',
     watchDemo: 'شاهد عرض SgharToon ↗',
-    downloadCv: 'تحميل السيرة الذاتية (PDF) ↓',
+    downloadCv: 'السيرة الذاتية – Full Stack (PDF) ↓',
+    downloadCvXr: 'السيرة الذاتية – Unity / XR (PDF) ↓',
     formTitle: 'أرسل رسالة',
     formName: 'اسمك',
     formEmail: 'بريدك الإلكتروني',
@@ -674,24 +730,38 @@ const ar: Content = {
     notPushed: 'لم يُنشر على GitHub بعد',
     emailLabel: 'البريد الإلكتروني',
     phoneLabel: 'الهاتف',
-    footerSub: 'Angular · React · .NET / C# · Unity — تونس.',
+    footerSub: 'Unity · AR / VR · .NET / C# · Angular · React — تونس · مستعد للانتقال (الخليج وأوروبا).',
     demosNote: 'هذه الصفحة متاحة بالإنجليزية فقط.',
   },
   hero: {
-    role: 'مطوّر Full Stack · قائد تقني',
-    location: 'تونس',
-    lead: '8 سنوات في بناء منتجات الويب والموبايل وقيادة تسليمها باستخدام Angular وReact و.NET / C# وUnity. قائد فريق وقائد تقني.',
+    role: 'قائد تقني أول · Unity والواقع الممتد · Full Stack .NET / Angular / React',
+    location: 'تونس · مستعد للانتقال',
+    lead: 'أكثر من 8 سنوات في بناء الألعاب وتجارب الواقع المعزّز والافتراضي ومنصات الويب التي تشغّلها، من المعمارية إلى الإنتاج. أكثر من 170 لعبة منشورة، وواقع معزّز على الموبايل منذ 2017، وتسليم Full Stack بـ .NET وAngular وReact.',
+  },
+  xr: {
+    eyebrow: 'AR & VR',
+    title: 'الواقع المعزّز والافتراضي منذ 2017',
+    lead: 'بدأت SgharToon كمنتج واقع معزّز: يلوّن الطفل صفحة ورقية عادية، ثم يوجّه إليها تطبيق الموبايل ليرى نموذجاً ثلاثي الأبعاد ينبض بالحياة بألوانه الخاصة. فاز هذا النموذج الأول في Orange Summer Challenge 2017 (أورنج تونس)، قبل أدوات الذكاء الاصطناعي التوليدي بسنوات.',
+    videoTitle: 'SgharToon V1 (2017): تلوين بالواقع المعزّز وقصص ثلاثية الأبعاد',
+    watch: 'شاهد على YouTube ↗',
+    items: [
+      { title: 'تطبيق تلوين بالواقع المعزّز — SgharToon V1', period: '2017', body: 'تتبّع صورة الصفحة المطبوعة، والتقاط تلوين الطفل وتطبيقه فورياً على النموذج ثلاثي الأبعاد. فائز في Orange Summer Challenge مع جائزة مالية.' },
+      { title: 'لعبة تدريب على الكيك بوكسينغ بالواقع الافتراضي', period: 'دراسة الهندسة', body: 'تجربة تدريب على قتال الفنون القتالية بالواقع الافتراضي، مطوّرة بـ Unity.' },
+      { title: 'تطبيقات واقع معزّز بـ Vuforia', period: 'دراسة الهندسة', body: 'عدة مشاريع واقع معزّز بـ Unity خلال دبلوم التصوير الرقمي والواقع الافتراضي.' },
+      { title: 'جولة افتراضية لمعرض رقمي', period: '2022', body: 'تجربة زيارة ثلاثية الأبعاد تفاعلية، بصفتي مطوّر Unity الوحيد في فريق من ثلاثة.' },
+    ],
   },
   stats: [
-    { value: '8 سنوات', label: 'مع C# / .NET' },
+    { value: '+8 سنوات', label: 'Unity وC# / .NET' },
+    { value: '170+', label: 'لعبة منشورة' },
     { value: '2,400+', label: 'مستخدم لـ SgharToon' },
-    { value: '170+', label: 'وحدة مُسلَّمة' },
-    { value: '99.7%', label: 'وقت تشغيل مقاس' },
+    { value: '2017', label: 'فائز Orange Summer Challenge (AR)' },
   ],
   skillGroups: [
     { title: 'الواجهة الأمامية', items: ['Angular', 'React', 'TypeScript'] },
     { title: 'الخلفية', items: ['C# / .NET', 'REST APIs', 'Node.js', 'PostgreSQL'] },
-    { title: 'Unity والموبايل', items: ['Unity (C#)', 'WebGL', 'Android (Java)', 'Socket.IO'] },
+    { title: 'Unity والموبايل', items: ['Unity (C#)', 'WebGL', 'iOS & Android', 'Android (Java / Kotlin)', 'Socket.IO', 'Addressables', 'URP'] },
+    { title: 'الواقع المعزّز والافتراضي و3D', items: ['AR Foundation', 'Vuforia', 'OpenXR', 'XR Interaction Toolkit', 'Meta Quest', '3D في الوقت الحقيقي'] },
     {
       title: 'القيادة والمنهجية',
       items: ['قيادة فريق', 'قيادة تقنية', 'Agile', 'مراجعة الكود', 'CI/CD', 'Docker', 'JIRA / ClickUp'],
@@ -719,7 +789,7 @@ const ar: Content = {
   },
   bio: {
     paragraphs: [
-      'مطوّر Full Stack وقائد تقني بخبرة 8 سنوات، مقيم في تونس. أبني منتجات الويب والموبايل وأقود تسليمها باستخدام Angular وReact و.NET / C# وUnity.',
+      'قائد تقني أول بخبرة تفوق 8 سنوات، مقيم في تونس ومستعد للانتقال. أقود تطوير الألعاب وتجارب الواقع المعزّز والافتراضي بـ Unity، وتسليم الويب Full Stack بـ .NET وAngular وReact. مهندس في التصوير الرقمي والواقع الافتراضي.',
       'كنت قائداً تقنياً وشريكاً مؤسساً في SgharToon، وهي منصة يستخدمها في الإنتاج أكثر من 2,400 شخص، وأعمل اليوم مستشاراً مستقلاً على أدوات الإدارة والتقارير. إلى جانب التسليم، أوجّه المطوّرين وقد درّست طلاب الإعلامية.',
     ],
     facts: [
@@ -739,7 +809,7 @@ const ar: Content = {
     {
       title: 'مستشار ومطوّر مستقل',
       org: 'تونس',
-      period: 'جانفي 2026 – الآن',
+      period: 'ديسمبر 2025 – الآن',
       points: [
         'أداة إدارة ولوحة تحكم Value Stream Mapping (VSM) لبنك — عميل سرّي، React و.NET Core.',
         'Retail Flow (ماي – جوان 2026): نموذج أولي لإدارة التجزئة الصناعية، صمّمته ونفّذته وحدي في ستة أسابيع.',
@@ -752,6 +822,7 @@ const ar: Content = {
       org: 'SgharToon',
       period: 'أكتوبر 2017 – ديسمبر 2025',
       points: [
+        'أول نموذج في 2017: تطبيق موبايل للتلوين بالواقع المعزّز، فائز في Orange Summer Challenge (أورنج تونس).',
         'قيادة فريق من المطوّرين: توزيع المهام ومراجعة الكود والتوجيه. انضم حوالي عشرة أشخاص على مرّ السنوات.',
         'التوجيه التقني منذ البداية (خارطة الطريق وترتيب الأولويات) ومعمارية مدفوعة بالبيانات: أكثر من 170 وحدة بمحتوى JSON بعيد.',
         'شبكات بسلطة الخادم مع استرداد عبر Snapshot، ومسار ذاكرة يحافظ على 60 إطاراً في الثانية على Android المنخفض.',
@@ -809,6 +880,15 @@ const ar: Content = {
     { title: 'إجازة في الإعلامية متعددة الوسائط، ISAMM', period: '2012 – 2015' },
   ],
   projects: [
+    {
+      title: 'تلوين بالواقع المعزّز — SgharToon V1',
+      period: '2017',
+      kind: 'واقع معزّز للموبايل · Unity',
+      summary: 'يلوّن الطفل صفحة ورقية، ثم يرى النموذج ثلاثي الأبعاد ينبض بالحياة بالواقع المعزّز بألوانه الخاصة. فائز في Orange Summer Challenge 2017.',
+      stack: ['Unity', 'C#', 'AR', 'Image tracking'],
+      href: 'https://youtu.be/VJaWkXp13bQ',
+      linkLabel: 'شاهد العرض ↗',
+    },
     {
       title: 'SgharToon',
       period: '2017 – 2025',
@@ -884,6 +964,7 @@ const ar: Content = {
   ],
   teaching: 'أستاذ في ISAMM (2022 – 2024): C# وJava وAndroid الأصلي ومعمارية البرمجيات، مع الإشراف على حوالي 20 طالباً. مدرّب Unity 2D في WeCode Land (2022 – 2023).',
   recognition: [
+    { title: 'Orange Summer Challenge', org: 'فائز مع جائزة مالية — نموذج التلوين بالواقع المعزّز', year: '2017' },
     { title: 'Google for Startups', org: 'برنامج التسريع في تونس', year: '2022' },
     { title: 'Westerwelle Foundation', org: 'زمالة Berlin Young Founders', year: '2024' },
     { title: 'LEAP Riyadh', org: 'عارض مختار', year: '2025' },

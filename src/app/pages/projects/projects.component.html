@@ -38,6 +38,8 @@
           <a [href]="site.sghartoonUrl" target="_blank" rel="noopener">sghartoon.com ↗</a>
         } @else if (p.route) {
           <a [routerLink]="p.route">{{ p.linkLabel }}</a>
+        } @else if (p.href) {
+          <a [href]="p.href" target="_blank" rel="noopener">{{ p.linkLabel }}</a>
         }
       </article>
     }

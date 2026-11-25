@@ -2,11 +2,12 @@ import { Component, computed, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LangService } from '../../core/i18n';
 import { SGHARTOON_SHOTS, SITE } from '../../core/site-config';
+import { VideoEmbedComponent } from '../../shared/video-embed/video-embed.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, VideoEmbedComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

@@ -8,6 +8,7 @@
       <a class="btn btn--primary" routerLink="/projects">{{ t.ui.seeWork }}</a>
       <a class="btn btn--ghost" routerLink="/experience">{{ t.ui.experience }}</a>
       <a class="btn btn--ghost" routerLink="/about">{{ t.ui.contact }}</a>
+      <a class="btn btn--ghost" [href]="site.cvXr" download>{{ t.ui.downloadCvXr }}</a>
       <a class="btn btn--ghost" [href]="cvUrl()" download>{{ t.ui.downloadCv }}</a>
     </div>
   </div>
@@ -65,9 +66,33 @@
     </p>
     <div class="hero__actions">
       <a class="btn btn--ghost" [href]="site.sghartoonUrl" target="_blank" rel="noopener">{{ t.ui.visit }}</a>
+      <a class="btn btn--ghost" [href]="site.appStoreUrl" target="_blank" rel="noopener">App Store ↗</a>
       @if (site.sghartoonDemoVideoUrl) {
         <a class="btn btn--ghost" [href]="site.sghartoonDemoVideoUrl" target="_blank" rel="noopener">{{ t.ui.watchDemo }}</a>
       }
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="page">
+    <span class="eyebrow">{{ t.xr.eyebrow }}</span>
+    <h2>{{ t.xr.title }}</h2>
+    <p class="lead">{{ t.xr.lead }}</p>
+    <div class="xr-video">
+      <app-video-embed [videoUrl]="site.arDemoEmbedUrl" [title]="t.xr.videoTitle"></app-video-embed>
+    </div>
+    <div class="grid-2 highlights">
+      @for (x of t.xr.items; track x.title) {
+        <div class="card">
+          <span class="badge badge--accent">{{ x.period }}</span>
+          <h3>{{ x.title }}</h3>
+          <p>{{ x.body }}</p>
+        </div>
+      }
+    </div>
+    <div class="hero__actions">
+      <a class="btn btn--ghost" [href]="site.arDemoWatchUrl" target="_blank" rel="noopener">{{ t.xr.watch }}</a>
     </div>
   </div>
 </section>
